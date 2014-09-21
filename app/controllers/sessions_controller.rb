@@ -7,14 +7,15 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.authenticate(params[:user][:email], params[:user][:password])
+    @user = User.authenticate(params[:email], params[:password])
 
     if @user
       session[:user_id] = @user.id
       flash[:notice] = "You are logged in!"
       redirect_to root_path
     else
-      flash[:notice] = "The information you entered does not match our records."
+      flash.now[:notice] = "The information you entered does not match our records."
+
     end
   end
 
