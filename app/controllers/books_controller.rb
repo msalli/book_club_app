@@ -6,6 +6,8 @@ class BooksController < ApplicationController
   end
 
   def create
+   # use amazon_request() to look up books
+
   end
 
   def show
