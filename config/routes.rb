@@ -1,11 +1,19 @@
 Rails.application.routes.draw do
 
- root "books#index"
+  root "books#index"
 
- get "/signup", to: "users#new"
+  get "/login", to: "sessions#new"
 
- resources :users
- resources :comments
- resources :books
+  post "/login", to: "sessions#create"
+
+  delete "/logout", to: "sessions#destroy"
+
+  get "/logout", to: "sessions#destroy" #to be deleted before production
+
+  get "/signup", to: "users#new"
+
+  resources :users
+  resources :comments
+  resources :books
 
 end

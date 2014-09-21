@@ -20,7 +20,9 @@ class User < ActiveRecord::Base
     # :confirmation => true,
     :length => { minimum: 8 }, on: :create
 
-
+  def self.authenticate email, password
+    User.find_by_email(email).try(:authenticate, password)
+  end
 
 
 
