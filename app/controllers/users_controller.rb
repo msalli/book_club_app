@@ -19,10 +19,16 @@ class UsersController < ApplicationController
   def show
     @user
 
+    #for nav
+    @current_user = current_user
+
   end
 
   def update
     @user.update(user_params)
+
+    #for nav
+    @current_user = current_user
 
   end
 

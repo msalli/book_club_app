@@ -5,6 +5,9 @@ class BooksController < ApplicationController
   def index
     @book = Book.all()
 
+    # for nav
+    @current_user = current_user
+
   end
 
   def create
@@ -15,6 +18,9 @@ class BooksController < ApplicationController
 
   def show
     @book
+
+    # for nav
+    @current_user = current_user
 
   end
 
