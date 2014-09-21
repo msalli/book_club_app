@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  has_secure_password
 
   has_many :favorites
   has_many :books, through: :favorites
@@ -16,8 +17,8 @@ class User < ActiveRecord::Base
 
   validates :password_digest,
     :presence => true,
-    :confirmation => true,
-    :length => { in: 8..20 }, on: :create
+    # :confirmation => true,
+    :length => { minimum: 8 }, on: :create
 
 
 
