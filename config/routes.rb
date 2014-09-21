@@ -2,11 +2,11 @@ Rails.application.routes.draw do
 
   root "books#index"
 
-  get "/login", to: "session#new"
+  get "/login", to: "sessions#new"
 
-  post "/login", to: "session#create"
+  post "/login", to: "sessions#create"
 
-  delete "/logout", to: "session#destroy"
+  delete "/logout", to: "sessions#destroy"
 
   get "/signup", to: "users#new"
 
