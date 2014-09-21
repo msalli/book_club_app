@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   delete "/logout", to: "sessions#destroy"
 
+  get "/logout", to: "sessions#destroy" #to be deleted before production
+
   get "/signup", to: "users#new"
 
   resources :users

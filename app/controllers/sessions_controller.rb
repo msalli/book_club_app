@@ -1,21 +1,21 @@
 class SessionsController < ApplicationController
   def new
     # page with login form
-    if session[:user_id] != nil
-      redirect_to root_path
-    end
+    # if session[:user_id] != nil
+    #   redirect_to root_path
+    # end
   end
 
   def create
-    @user = User.authenticate(params[:email], params[:password])
+    #where auth happens
+    @user = User.authenticate(params[:user][:email], params[:user][:password])
 
     if @user
       session[:user_id] = @user.id
-      flash[:notice] = "You are logged in!"
-      redirect_to root_path
+      redirect_to root_path, :notice => "You are logged in!"
     else
-      flash.now[:notice] = "The information you entered does not match our records."
-
+      flash.now[:notice] = "The information you entered doesn't match our records."
+      render :new
     end
   end
 
