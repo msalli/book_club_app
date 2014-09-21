@@ -1,1 +1,18 @@
-  <%= render "books/nav" %>
+<%= render "books/nav" %>
+
+<div class="container-fluid">
+  <div class="row" id="row-1">
+    <div class="col-xs-4 col-xs-offset-1">
+        <img id="user-profile-pic" src="<%= @user.image_url %>">
+        <h4 id="user-name"><%= @user.first_name %> <%= @user.last_name %> </h4>
+        <p id="current-book">Currently reading: </p>
+        <p id="books-read">Books read:</p>
+    </div>
+  </div>
+
+  <div class="row" id="row-2">
+    <div class="col-xs-10 col-xs-offset-1">
+      <h3><%= @user.first_name %>'s Library</h3>
+    </div>
+  </div>
+</div>
