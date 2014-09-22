@@ -5,8 +5,7 @@ class CreateBooks < ActiveRecord::Migration
       t.string :author
       t.text :description
       t.string :lg_img
-      t.string :med_img
-      t.string :rating
+      t.string :link
       t.string :tags
 
       t.timestamps

@@ -4,34 +4,27 @@ class BooksController < ApplicationController
 
   def index
     @book = Book.all()
-
     # for nav
     @current_user = current_user
-
   end
 
   def create
    # use amazon_request() to look up books
    Book.create(book_params)
-
   end
 
   def show
     @book
-
     # for nav
     @current_user = current_user
-
   end
 
   def update
     @book.update(book_params)
-
   end
 
   def destroy
     @book.destroy
-
   end
 
   private

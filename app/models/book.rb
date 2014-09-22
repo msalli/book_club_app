@@ -7,16 +7,6 @@ class Book < ActiveRecord::Base
   has_many :comments, as: :commentable, dependent: :destroy
 
 
-  validates :title,
-    :presence => true
-
-  validates :author,
-    :presence => true
-
-  validates :description,
-    :presence => true
-
-
   # amazon request method
   def self.amazon_request(book)
     request = Vacuum.new('US')
