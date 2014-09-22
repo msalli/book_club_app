@@ -17,6 +17,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'vacuum'
 gem 'awesome_print'
 gem 'activesupport', '~> 4.1.6'
+gem 'handlebars_assets'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
