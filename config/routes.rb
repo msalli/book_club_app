@@ -13,7 +13,10 @@ Rails.application.routes.draw do
   get "/signup", to: "users#new"
 
   resources :users
-  resources :comments
-  resources :books
+
+  resources :books do
+    resources :favorites
+    resources :comments
+  end
 
 end

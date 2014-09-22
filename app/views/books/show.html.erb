@@ -1,1 +1,63 @@
 <%= render "nav" %>
+
+  <div class="panel-body">
+    <div class="jumbotron">
+      <div class="container-fluid">
+        <h1>book club</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-4 col-xs-offset-1">
+        <a href="<%= @book.link %>" target="_blank"><img src="<%= @book.lg_img  %>"></a>
+      </div>
+      <div class="col-xs-3">
+        <h1><%= @book.title %></h1>
+        <h4><%= @book.author %></h4>
+        <p><strong>Description:</strong></p>
+        <p>Post-ironic dreamcatcher Brooklyn art party. Next level Brooklyn Truffaut quinoa dreamcatcher, art party bicycle rights fixie sriracha Vice ugh pork belly sartorial. Tumblr ugh Brooklyn leggings. IPhone viral ethical fashion axe, asymmetrical bicycle rights tattooed hoodie meggings normcore fingerstache +1. Pug wolf vinyl Cosby sweater Echo Park. Dreamcatcher ugh brunch, cardigan Shoreditch Echo Park fashion axe church-key Wes Anderson pour-over. Pickled food truck swag, locavore banh mi meggings Wes Anderson brunch trust fund.</p>
+
+        <button class="btn btn-default" value="read" id="read-it">I've Read It!</button>
+        <button class="btn btn-warning" value="queue" id="queue-it">Add to Queue</button>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-xs-3 col-xs-offset-1" id="discussion-text">
+        <h3>Join the discussion: </h3>
+      </div>
+    </div>
+
+    <div class="row-discussions">
+      <div class="col-xs-4 col-xs-offset-1">
+        <div class="form-group">
+          <%= form_for ([@book, @comment]) do |f| %>
+          <div class="form-group">
+            <%= f.label :title, "Start a discussion:" %>
+            <%= f.text_field :title, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.label :body, "Include a comment:" %>
+            <%= f.text_area :body, class: "form-control" %>
+          </div>
+          <div class="form-group">
+            <%= f.submit "Post", class: "form-control btn btn-default" %>
+          </div>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="col-xs-6">
+        <div class="all-comments">
+        <% @book.comments.each do |comment| %>
+          <div class="indiv-comment">
+            <strong><%= comment.title %></strong><br>
+            <%= comment.body  %>
+            </div>
+        <% end %>
+        </div>
+      </div>
+
+
+    </div>
+

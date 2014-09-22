@@ -15,6 +15,10 @@ class BooksController < ApplicationController
 
   def show
     @book
+
+    @favorite = Favorite.new
+    @comment = @book.comments.new
+
     # for nav
     @current_user = current_user
   end
