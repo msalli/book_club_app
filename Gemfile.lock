@@ -117,6 +117,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activesupport (~> 4.1.6)
   awesome_print
   bcrypt (~> 3.1.7)
   coffee-rails (~> 4.0.0)
