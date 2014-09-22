@@ -13,4 +13,12 @@
       </div>
     <% end %>
 
+    <div class="row-center">
+      <div class="col-xs-12">
+        <% @book.each do |book| %>
+         <a href="javascript:void(0)"><img class="books" src="<%= book.lg_img %>"></a>
+        <% end %>
+      </div>
+    </div>
+
   </div>
