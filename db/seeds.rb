@@ -169,6 +169,89 @@ users = User.create([{
       link: "http://www.amazon.com/The-Children-Act-Ian-McEwan/dp/0385539703%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0385539703"
       }])
 
+  books2 = Book.create([{
+    :title => "The Great Gatsby",
+    :author => "F. Scott Fitzgerald",
+    :lg_img => "http://ecx.images-amazon.com/images/I/51tmGgkv3iL.jpg",
+    :link => "http://www.amazon.com/The-Great-Gatsby-Scott-Fitzgerald/dp/0743273567%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0743273567"
+    },
+    {
+    :title => "The Grapes of Wrath",
+    :author => "John Steinbeck",
+    :lg_img => "http://ecx.images-amazon.com/images/I/41vv8-S5n2L.jpg",
+    :link => "http://www.amazon.com/The-Grapes-Wrath-John-Steinbeck/dp/0143039431%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0143039431"
+    },
+    {
+    :title => "Lolita",
+    :author => "Vladimir Nabokov",
+    :lg_img => "http://ecx.images-amazon.com/images/I/41gMT3BaWiL.jpg",
+    :link => "http://www.amazon.com/Lolita-Vladimir-Nabokov/dp/0679723161%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0679723161"
+    },
+    {
+    :title => "The Sound and the Fury: The Corrected Text",
+    :author => "William Faulkner",
+    :lg_img => "http://ecx.images-amazon.com/images/I/41LVQSI2RcL.jpg",
+    :link => "http://www.amazon.com/The-Sound-Fury-Corrected-Text/dp/0679732241%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0679732241"
+    },
+    {
+    :title => "Anna Karenina",
+    :author => "Leo Tolstoy",
+    :lg_img => "http://ecx.images-amazon.com/images/I/51vPf2CfSEL.jpg",
+    :link => "http://www.amazon.com/Anna-Karenina-Leo-Tolstoy/dp/0143035002%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0143035002"
+    },
+    {
+    :title => "This One Is Mine: A Novel",
+    :author => "Maria Semple",
+    :lg_img => "http://ecx.images-amazon.com/images/I/41H6ZtbUOsL.jpg",
+    :link => "http://www.amazon.com/This-One-Is-Mine-Novel/dp/031603133X%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D031603133X"
+    },
+    {
+    :title => "Vampires in the Lemon Grove: And Other Stories (Vintage Contemporaries)",
+    :author => "Karen Russell",
+    :lg_img => "http://ecx.images-amazon.com/images/I/51ABYrZLkrL.jpg",
+    :link => "http://www.amazon.com/Vampires-Lemon-Grove-Stories-Contemporaries/dp/0307947475%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0307947475"
+    },
+    {
+    :title => "The Vacationers: A Novel",
+    :author => "Emma Straub",
+    :lg_img => "http://ecx.images-amazon.com/images/I/51HRvrNYdIL.jpg",
+    :link => "http://www.amazon.com/The-Vacationers-Novel-Emma-Straub/dp/1594631573%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1594631573"
+    },
+    {
+    :title => "The Fault in Our Stars",
+    :author => "John Green",
+    :lg_img => "http://ecx.images-amazon.com/images/I/51VlKD1aucL.jpg",      :link => "http://www.amazon.com/The-Fault-Stars-John-Green/dp/014242417X%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D014242417X"
+    },
+    {
+    :title => "Since You've Been Gone",
+    :author => "Morgan Matson",
+    :lg_img => "http://ecx.images-amazon.com/images/I/61CME2skESL.jpg",
+    :link => "http://www.amazon.com/Since-Youve-Been-Morgan-Matson/dp/1442435003%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1442435003"
+    },
+    {
+    :title => "The One and Only Ivan",
+    :author => "Katherine Applegate",
+    :lg_img => "http://ecx.images-amazon.com/images/I/41wE-z7ixPL.jpg",
+    :link => "http://www.amazon.com/The-Only-Ivan-Katherine-Applegate/dp/0061992259%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0061992259"
+    },
+    {
+    :title => "The Rosie Project: A Novel",
+    :author => "Graeme Simsion",
+    :lg_img => "http://ecx.images-amazon.com/images/I/514ViPVcPVL.jpg",
+    :link => "http://www.amazon.com/The-Rosie-Project-A-Novel/dp/1476729093%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1476729093"
+    },
+    {
+    :title => "Eat, Pray, Love: One Woman's Search for Everything Across Italy, India and Indonesia",
+    :author => "Elizabeth Gilbert",
+    :lg_img => "http://ecx.images-amazon.com/images/I/4159o9E2SLL.jpg",
+    :link => "http://www.amazon.com/Eat-Pray-Love-Everything-Indonesia/dp/0143038419%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0143038419"
+    },
+    {
+    :title => "We Were Liars",
+    :author => "E. Lockhart",
+    :lg_img => "http://ecx.images-amazon.com/images/I/51UX7hdSdJL.jpg",
+    :link => "http://www.amazon.com/We-Were-Liars-E-Lockhart/dp/038574126X%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D038574126X"
+    }])
 
 
 
