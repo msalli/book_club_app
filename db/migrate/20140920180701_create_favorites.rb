@@ -3,7 +3,7 @@ class CreateFavorites < ActiveRecord::Migration
     create_table :favorites do |t|
       t.integer :user_id
       t.integer :book_id
-      t.boolean :isCurrent
+      t.string :status
 
       t.timestamps
     end

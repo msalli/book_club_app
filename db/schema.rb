@@ -39,7 +39,7 @@ ActiveRecord::Schema.define(version: 20140920180739) do
   create_table "favorites", force: true do |t|
     t.integer  "user_id"
     t.integer  "book_id"
-    t.boolean  "isCurrent"
+    t.string   "status"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
