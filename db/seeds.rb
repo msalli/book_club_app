@@ -39,8 +39,6 @@ users = User.create([{
   }])
 
 
-
-
   # creating books db
   #  def amazon_request(book)
   #   req = Vacuum.new('US')
