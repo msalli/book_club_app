@@ -18,12 +18,15 @@
         <p>Post-ironic dreamcatcher Brooklyn art party. Next level Brooklyn Truffaut quinoa dreamcatcher, art party bicycle rights fixie sriracha Vice ugh pork belly sartorial. Tumblr ugh Brooklyn leggings. IPhone viral ethical fashion axe, asymmetrical bicycle rights tattooed hoodie meggings normcore fingerstache +1. Pug wolf vinyl Cosby sweater Echo Park. Dreamcatcher ugh brunch, cardigan Shoreditch Echo Park fashion axe church-key Wes Anderson pour-over. Pickled food truck swag, locavore banh mi meggings Wes Anderson brunch trust fund.</p>
 
         <% if @current_user %>
-          <form action="/books/<%= @book.id %>/favorites" method="post">
+          <p style="color:blue"><%= @this_book ? "You have already saved this book!": "Save this book to your list!" %></p>
+            <% if !@this_book %>
+              <form action="/books/<%= @book.id %>/favorites" method="post">
               <%= token_tag form_authenticity_token %>
               <button class="btn btn-default" name="favorite[status]" value="read" id="read-it">I've Read It!</button>
 
               <button class="btn btn-warning" name="favorite[status]" value="queue" id="queue-it">Add to Queue</button>
-          </form>
+              </form>
+            <% end %>
         <% end %>
 
       </div>

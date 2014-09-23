@@ -16,8 +16,11 @@ class BooksController < ApplicationController
   def show
     @book
 
+    @favorites = current_user.favorites
+
     @favorite = Favorite.new
     @comment = @book.comments.new
+    @this_book = current_user.favorites.find_by_book_id(params[:id])
 
     @parent = Comment.find_by_id(params[:id])
     @comment_child = @parent.comments.new
