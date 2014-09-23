@@ -2,12 +2,29 @@ $(document).ready(function() {
 
 
   // home page
-  $(".books").on("click", ".book", function() {
-    console.log(this);
+  // $(".books").on("click", ".book", function() {
+  //   console.log(this);
+  // });
 
-  });
+  $(".fancybox")
+      .attr('rel', 'gallery')
+      .fancybox({
+        helpers: {
+          title: {
+            type: 'inside',
+          }
+        },
+        beforeLoad: function() {
+          this.title = $(this.element).attr('title');
+        }
+      });
 
 
+
+
+
+
+  // show page
   // for "I've Read It!" button
   $(".read-it").on("submit", function(e) {
     e.preventDefault();
@@ -36,7 +53,7 @@ $(document).ready(function() {
 
   });
 
-
+    // show page
     // for "Add to Queue" button
     $(".queue-it").on("submit", function(e) {
       e.preventDefault();
@@ -64,7 +81,6 @@ $(document).ready(function() {
       addQueue();
 
     });
-
 
   // show page
   $(".new_comment").on("submit", function(e) {

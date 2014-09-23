@@ -39,67 +39,6 @@ users = User.create([{
   }])
 
 
-  # creating books db
-  #  def amazon_request(book)
-  #   req = Vacuum.new('US')
-
-  #   req.configure(
-  #     aws_access_key_id:     ENV["AMAZON_ACCESS_KEY"],
-  #     aws_secret_access_key: ENV["AMAZON_SECRET"],
-  #     associate_tag:         ENV["ASSOCIATE_TAG"]
-  #   )
-
-  #   params = {
-  #     'SearchIndex' => 'Books',
-  #     'Version' => '2013-08-01',
-  #     'Title' => book,
-  #     'IncludeReviewsSummary' => false,
-  #     'MerchantId' => 'Amazon',
-  #     'ResponseGroup' => 'Medium',
-  #     'Sort' => 'salesrank'
-  #   }
-
-  #   response = req.item_search(query: params)
-  #   hash = Hash.from_xml(response.body)
-
-  #   enterHash = hash["ItemSearchResponse"]["Items"]["Item"]
-  #   enterHash.each do |res|
-  #       link = res["DetailPageURL"]
-  #       author = res["ItemAttributes"]["Author"]
-  #       title = res["ItemAttributes"]["Title"]
-  #       lg_img = res["LargeImage"]["URL"]
-  #       # ap res["EditorialReviews"]["EditorialReview"]
-
-  #       book = {:title => title, :author => author, :lg_img => lg_img, :link => link }
-  #       myBooks = []
-
-  #       myBooks.push(book)
-  #     break
-  #   end
-  # end
-
-  # def pass_books(books)
-  #   books.each do |book|
-  #     amazon_request(book)
-  #   end
-  # end
-
-
-  #       booksArr = ["The Goldfinch",
-  #         "Pride and Prejudice",
-  #         "Gone Girl",
-  #         "Personal",
-  #         "The Witch With No Name",
-  #         "The Alchemist",
-  #         "Outlander",
-  #         "Mean Streak",
-  #         "Big Little Lies",
-  #         "The King's Curse",
-  #         "The Children Act",
-  #       ]
-
-  #   pass_books(booksArr)
-
     books = Book.create([{
       title: "The Goldfinch",
       author: "Donna Tartt",
