@@ -12,5 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.fancybox.js
+//= require jquery.fancybox.css
 //= require handlebars
 //= require_tree .

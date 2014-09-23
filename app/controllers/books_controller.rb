@@ -13,7 +13,7 @@ class BooksController < ApplicationController
 
 
   def create
-   search = pass_books(book_params)
+   searchAZ = pass_books(book_params)
    bookObj = @myBooks[0]
 
    @book = Book.create(bookObj)
