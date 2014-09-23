@@ -17,6 +17,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'vacuum'
 gem 'awesome_print'
 gem 'activesupport', '~> 4.1.6'
+gem 'handlebars_assets'
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -33,6 +34,10 @@ gem 'spring',        group: :development
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+group :development, :test do
+  gem 'pry'
+  gem 'pry-rails'
+end
 # Use unicorn as the app server
 # gem 'unicorn'
 

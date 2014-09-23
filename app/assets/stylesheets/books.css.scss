@@ -7,9 +7,45 @@
   text-align: center;
 }
 
-.books {
+.book {
   height: 265px;
   width: 175px;
   margin: 10px;
   /*box-shadow: 3px 3px 5px 6px #ccc;*/
+}
+
+#popover {
+
+}
+
+#queue-it {
+  margin-left: 10px;
+}
+
+#discussion-text {
+  margin-top: 50px;
+}
+
+.form-group {
+  color: white;
+  margin-top: 30px;
+}
+
+.row-discussions {
+  height: 700px;
+  background-color: #33353D ;
+}
+
+.all-comments {
+  margin-top: 55px;
+  padding: 15px;
+  background-color: white;
+  border: 1px solid grey;
+  height: 500px;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.indiv-comment {
+  border-bottom: 1px solid grey;
 }

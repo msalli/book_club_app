@@ -15,6 +15,14 @@ class BooksController < ApplicationController
 
   def show
     @book
+
+    @favorite = Favorite.new
+    @comment = @book.comments.new
+    @this_book = current_user.favorites.find_by_book_id(params[:id])
+
+    # @parent = Comment.find_by_id(params[:id])
+    # @comment_child = @parent.comments.new
+
     # for nav
     @current_user = current_user
   end
@@ -32,7 +40,6 @@ class BooksController < ApplicationController
   def set_book
     @book = Book.find(params[:id])
   end
-
 
   def book_params
     params.require(:book).permit(
