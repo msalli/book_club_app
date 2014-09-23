@@ -4,10 +4,9 @@ $(document).ready(function() {
   // home page
   $(".books").on("click", ".book", function() {
     console.log(this);
-
   });
 
-
+  // show page
   // for "I've Read It!" button
   $(".read-it").on("submit", function(e) {
     e.preventDefault();
@@ -36,7 +35,7 @@ $(document).ready(function() {
 
   });
 
-
+    // show page
     // for "Add to Queue" button
     $(".queue-it").on("submit", function(e) {
       e.preventDefault();
@@ -64,7 +63,6 @@ $(document).ready(function() {
       addQueue();
 
     });
-
 
   // show page
   $(".new_comment").on("submit", function(e) {

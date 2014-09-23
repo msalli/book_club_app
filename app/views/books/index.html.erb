@@ -13,9 +13,15 @@
       </div>
     <% end %>
 
+    <%= form_for @book do |f| %>
+      <%= f.text_field :title %>
+      <%= f.submit "Search Book" %>
+    <% end %>
+
+
     <div class="row-center">
       <div class="col-xs-12 books">
-        <% @book.each do |book| %>
+        <% @books.each do |book| %>
          <a href="javascript:void(0)"><img class="book" src="<%= book.lg_img %>"></a>
         <% end %>
       </div>
