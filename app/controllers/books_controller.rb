@@ -19,6 +19,9 @@ class BooksController < ApplicationController
     @favorite = Favorite.new
     @comment = @book.comments.new
 
+    @parent = Comment.find_by_id(params[:id])
+    @comment_child = @parent.comments.new
+
     # for nav
     @current_user = current_user
   end

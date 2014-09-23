@@ -1,23 +1,38 @@
 class CommentsController < ApplicationController
 
   before_action :is_authenticated?
-
+  before_action :find_parent
 
   def create
-    @user = current_user
     @book = Book.find_by_id(params[:book_id])
 
-    @comment = @book.comments.new
-
     comment_params = params.require(:comment).permit(:title, :body)
-    @book.comments.create(comment_params)
+    @comment = @book.comments.create(comment_params)
 
-    redirect_to root_path
+    # sending json back to ajax cal
+    render json: @comment
+  end
 
+  def create_child
+    @parent.comments.create(comment_params)
+    redirect_to_book
   end
 
 
+  private
 
+  def find_parent
+    if params[:id]
+      @parent = Comment.find_by_id(params[:id])
+    end
+  end
 
+  def comment_params
+    params.require(:comment).permit(:title, :body)
+  end
+
+  def redirect_to_book
+    redirect_to book_path @book.id
+  end
 
 end

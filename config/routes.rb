@@ -12,11 +12,13 @@ Rails.application.routes.draw do
 
   get "/signup", to: "users#new"
 
+  post "books/:book_id/comments", to: "comments#create", :as => "book_comments"
+  post "books/:book_id/comments/:id", to: "comments#create", :as => "book_comment"
+
   resources :users
 
   resources :books do
     resources :favorites
-    resources :comments
   end
 
 end
