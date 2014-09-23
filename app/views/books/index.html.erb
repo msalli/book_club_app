@@ -22,7 +22,7 @@
     <div class="row-center">
       <div class="col-xs-12 books">
         <% @books.each do |book| %>
-         <a href="javascript:void(0)"><img class="book" src="<%= book.lg_img %>"></a>
+         <a class="fancybox" title="<h4><%= book.title %></h4><h5>Written by: <%= book.author %></h5><a href='/books/<%= book.id %>'>See More...</a>" rel="group" href="<%= book.lg_img %>"><img class="book" src="<%= book.lg_img %>"></a>
         <% end %>
       </div>
     </div>
