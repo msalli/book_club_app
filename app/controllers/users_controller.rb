@@ -19,6 +19,9 @@ class UsersController < ApplicationController
   def show
     @user
 
+    @favorites = current_user.favorites
+    @books = current_user.books
+
     #for nav
     @current_user = current_user
 

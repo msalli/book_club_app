@@ -2,10 +2,9 @@ $(document).ready(function() {
 
 
   // home page
-  $(".popover").hide();
-
   $(".books").on("click", ".book", function() {
     console.log(this);
+
   });
 
 

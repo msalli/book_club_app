@@ -11,6 +11,7 @@ class FavoritesController < ApplicationController
   end
 
   def update
+    @favorites = current_user
   end
 
   def show
