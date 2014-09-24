@@ -13,9 +13,17 @@
       </div>
     <% end %>
 
+    <p>This is the Amazon search</p>
     <%= form_for @book do |f| %>
-      <%= f.text_field :title %>
+      <%= f.text_field :title, class: "search-val" %>
       <%= f.submit "Search Book" %>
+    <% end %>
+
+    <p>This is the DB search</p>
+    <%= form_for @search, method: :get, url: '/search/new', html: {id: 'search-bar'} do |f| %>
+      <%= f.label :search  %>
+      <%= f.text_field :search, class: "search-val" %>
+      <%= f.submit "Search" %>
     <% end %>
 
 

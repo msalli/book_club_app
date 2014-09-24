@@ -7,6 +7,8 @@ class BooksController < ApplicationController
   def index
     @books = Book.all()
     @book = Book.new
+
+    @search = ""
     # for nav
     @current_user = current_user
   end
@@ -38,30 +40,28 @@ class BooksController < ApplicationController
       'IncludeReviewsSummary' => false,
       'MerchantId' => 'Amazon',
       'ResponseGroup' => 'Medium',
-      'Sort' => 'salesrank'
+      'Sort' => 'relevancerank'
     }
 
     response = req.item_search(query: params)
-    p "getting response from AMAZON"
 
     hash = Hash.from_xml(response.body)
-    p "this is the hash!", hash
 
     enterHash = hash["ItemSearchResponse"]["Items"]["Item"]
-    p "this is the enterHash", enterHash
 
     enterHash.each do |res|
         link = res["DetailPageURL"]
-        p "this link", link
         author = res["ItemAttributes"]["Author"]
-        p "this is the author", author
         title = res["ItemAttributes"]["Title"]
-        p "this is the title", title
         lg_img = res["LargeImage"]["URL"]
-        p "this is the image link", lg_img
-        # ap res["EditorialReviews"]["EditorialReview"]
 
-        book = {:title => title, :author => author, :lg_img => lg_img, :link => link }
+        if !res["EditorialReviews"]["EditorialReview"][0]
+          description = res["EditorialReviews"]["EditorialReview"]["Content"]
+        else
+          description = res["EditorialReviews"]["EditorialReview"][0]["Content"]
+        end
+
+        book = {:title => title, :author => author, :description => description, :lg_img => lg_img, :link => link }
         @myBooks = []
 
         @myBooks.push(book)
@@ -70,11 +70,8 @@ class BooksController < ApplicationController
   end
 
   # PASSING BOOK FROM SEARCH
-  def pass_books(books)
-    p "passing books"
-    books.each do |book|
+  def pass_books(book)
       amazon_request(book)
-    end
   end
 
 
@@ -88,14 +85,6 @@ class BooksController < ApplicationController
     # for nav
     @current_user = current_user
   end
-
-  # def update
-  #   @book.update(book_params)
-  # end
-
-  # def destroy
-  #   @book.destroy
-  # end
 
   private
 

@@ -1,11 +1,6 @@
 $(document).ready(function() {
 
-
-  // home page
-  // $(".books").on("click", ".book", function() {
-  //   console.log(this);
-  // });
-
+  // photo enlarge, popover box on index page
   $(".fancybox")
       .attr('rel', 'gallery')
       .fancybox({
@@ -20,7 +15,35 @@ $(document).ready(function() {
       });
 
 
+  // index page search bar
+  $("#search-bar").on("submit", function(e) {
+    e.preventDefault();
 
+    var result = $("#_search").val();
+    var formURL = $(this).attr("action");
+    console.log(result);
+    console.log(formURL);
+
+    function searchIt() {
+      $.ajax({
+        type: 'GET',
+        url: formURL,
+        dataType: "json",
+        data: { search: result },
+        success: function(data) {
+          console.log("Success with data", data);
+          // clear form
+          $(".search-val").val();
+        },
+        error: function(data) {
+          console.log("ERROR");
+        }
+      });
+    }
+
+    searchIt();
+
+  });
 
 
 
@@ -53,36 +76,37 @@ $(document).ready(function() {
 
   });
 
-    // show page
-    // for "Add to Queue" button
-    $(".queue-it").on("submit", function(e) {
-      e.preventDefault();
+  // show page
+  // for "Add to Queue" button
+  $(".queue-it").on("submit", function(e) {
+    e.preventDefault();
 
-      var queue = $(".queue-val").val();
-      var formURL = $(this).attr("action");
+    var queue = $(".queue-val").val();
+    var formURL = $(this).attr("action");
 
-      function addQueue() {
-        $.ajax({
-          type: 'POST',
-          url: formURL,
-          data: { favorite: { status: queue }},
-          success: function(data) {
-            console.log("Success with data", data);
+    function addQueue() {
+      $.ajax({
+        type: 'POST',
+        url: formURL,
+        data: { favorite: { status: queue }},
+        success: function(data) {
+          console.log("Success with data", data);
 
-            // append to page
-            $("#book-status").append("Added to queue!");
-          },
-          error: function(data) {
-            console.log("ERROR");
-          }
-        });
-      }
+          // append to page
+          $("#book-status").append("Added to queue!");
+        },
+        error: function(data) {
+          console.log("ERROR");
+        }
+      });
+    }
 
-      addQueue();
+    addQueue();
 
-    });
+  });
 
   // show page
+  // reviews
   $(".new_comment").on("submit", function(e) {
     e.preventDefault();
 
