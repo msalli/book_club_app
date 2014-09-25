@@ -2,9 +2,10 @@ class SearchController < ApplicationController
 
   def new
     @search = params[:search]
-    @results = Book.find_by_title(search)
+    @results = Book.where(:title => params[:search])
 
-    render json: @search
+    render json: @results
+
   end
 
   def create

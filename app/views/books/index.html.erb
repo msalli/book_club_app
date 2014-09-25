@@ -13,19 +13,39 @@
       </div>
     <% end %>
 
-    <p>This is the Amazon search</p>
-    <%= form_for @book do |f| %>
-      <%= f.text_field :title, class: "search-val" %>
-      <%= f.submit "Search Book" %>
-    <% end %>
+    <div class="row">
+      <div class="col-xs-4 col-xs-offset-8">
+      <%= form_for @search, method: :get, url: '/search/new', html: {id: 'search-bar'} do |f| %>
+        <div class="form-group">
+          <label>Find a book: </label>
+          <%= f.text_field :search, class: "search-db form-control" %>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="form-control btn btn-default" data-toggle="modal" data-target="#myModal">Search</button>
+        </div>
+      <% end %>
+      </div>
+    </div>
 
-    <p>This is the DB search</p>
-    <%= form_for @search, method: :get, url: '/search/new', html: {id: 'search-bar'} do |f| %>
-      <%= f.label :search  %>
-      <%= f.text_field :search, class: "search-val" %>
-      <%= f.submit "Search" %>
-    <% end %>
-
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+         <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Results:</h4>
+          </div>
+          <div class="modal-body">
+            <p class="error"></p>
+            <p class="book-title"></p>
+            <p class="book-author"></p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" id="modal-read">I've Read It!</button>
+            <button type="button" class="btn btn-warning" id="modal-queue">Add to Queue</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="row-center">
       <div class="col-xs-12 books">
@@ -34,5 +54,11 @@
         <% end %>
       </div>
     </div>
+
+    <!-- this form searches using the amazon api -->
+    <%= form_for @book do |f| %>
+      <%= f.text_field :title, class: "search-az" %>
+      <%= f.submit "Search Book" %>
+    <% end %>
 
   </div>

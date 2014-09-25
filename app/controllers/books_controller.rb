@@ -15,12 +15,15 @@ class BooksController < ApplicationController
 
 
   def create
-   searchAZ = pass_books(book_params)
-   bookObj = @myBooks[0]
+    bookObj = amazon_request(book_params)
 
-   @book = Book.create(bookObj)
+    if bookObj
+      @book = Book.create(bookObj)
+     else
+      flash[:notice] = "We couldn't find this book."
+    end
 
-   redirect_to root_path
+     redirect_to root_path
   end
 
    # SEARCHING AMAZON
@@ -40,47 +43,75 @@ class BooksController < ApplicationController
       'IncludeReviewsSummary' => false,
       'MerchantId' => 'Amazon',
       'ResponseGroup' => 'Medium',
-      'Sort' => 'relevancerank'
+      'Sort' => 'salesrank'
     }
 
     response = req.item_search(query: params)
 
     hash = Hash.from_xml(response.body)
+    # p "This is the large hash", hash
 
     enterHash = hash["ItemSearchResponse"]["Items"]["Item"]
+    ap enterHash
+    book = nil
 
-    enterHash.each do |res|
-        link = res["DetailPageURL"]
-        author = res["ItemAttributes"]["Author"]
-        title = res["ItemAttributes"]["Title"]
-        lg_img = res["LargeImage"]["URL"]
+    if enterHash.kind_of?(Hash) == true
+      p "CONFIRMED THIS IS A HASH"
+      link = enterHash["DetailPageURL"]
+      author = enterHash["ItemAttributes"]["Author"]
+      title = enterHash["ItemAttributes"]["Title"]
+      lg_img = enterHash["LargeImage"]["URL"]
 
-        if !res["EditorialReviews"]["EditorialReview"][0]
-          description = res["EditorialReviews"]["EditorialReview"]["Content"]
-        else
-          description = res["EditorialReviews"]["EditorialReview"][0]["Content"]
-        end
+      if !enterHash["EditorialReviews"]["EditorialReview"][0]
+        description = enterHash["EditorialReviews"]["EditorialReview"]["Content"]
+      else
+       description = enterHash["EditorialReviews"]["EditorialReview"][0]["Content"]
+      end
+      book = {:title => title, :author => author, :description => description, :lg_img => lg_img, :link => link }
+    else
+      p "THIS IS NOT A HASH"
+      if enterHash != nil
+        enterHash.each do |res|
+          p "THIS IS THE RES", res
+            link = res["DetailPageURL"]
+            ap link
+            if !res["ItemAttributes"]["Author"][0]
+              author = res["ItemAttributes"]["Author"]
+            else
+              author = res["ItemAttributes"]["Author"][0]
+            end
 
-        book = {:title => title, :author => author, :description => description, :lg_img => lg_img, :link => link }
-        @myBooks = []
+            ap author
+            title = res["ItemAttributes"]["Title"]
+            ap title
+            lg_img = res["LargeImage"]["URL"]
+            ap lg_img
 
-        @myBooks.push(book)
-      break
-    end
-  end
+            if !res["EditorialReviews"]["EditorialReview"][0]
+              description = res["EditorialReviews"]["EditorialReview"]["Content"]
+            else
+              description = res["EditorialReviews"]["EditorialReview"][0]["Content"]
+            end
+            ap description
 
-  # PASSING BOOK FROM SEARCH
-  def pass_books(book)
-      amazon_request(book)
+            book = {:title => title, :author => author, :description => description, :lg_img => lg_img, :link => link }
+          break
+        end #end for each do
+      end #end for if enter hash is not nil
+    end #ending if for confirm type
+
+    book
   end
 
 
   def show
     @book
 
+    if current_user
+      @this_book = current_user.favorites.find_by_book_id(params[:id])
+    end
     @favorite = Favorite.new
     @comment = @book.comments.new
-    @this_book = current_user.favorites.find_by_book_id(params[:id])
 
     # for nav
     @current_user = current_user

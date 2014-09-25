@@ -14,6 +14,13 @@ $(document).ready(function() {
         }
       });
 
+  //modal?
+  $(".modal").hide();
+
+  $(".close").on("click", function() {
+      $(".modal").hide();
+  });
+
 
   // index page search bar
   $("#search-bar").on("submit", function(e) {
@@ -33,7 +40,14 @@ $(document).ready(function() {
         success: function(data) {
           console.log("Success with data", data);
           // clear form
-          $(".search-val").val();
+          $(".search-db").val("");
+              $(".modal").show();
+              if (data[0] !== undefined) {
+                $(".book-title").html(data[0].title);
+                $(".book-author").html(data[0].author);
+              } else {
+                $(".error").html("Your search didn't match any titles in our database.");
+              }
         },
         error: function(data) {
           console.log("ERROR");
