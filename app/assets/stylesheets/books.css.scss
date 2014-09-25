@@ -1,10 +1,11 @@
-.jumbotron {
-  height: 250px;
-  background-color: #C279CC;
+.header {
+  height: 275px;
 }
 
-.jumbotron h1 {
+.header h1 {
+  font-size: 65px;
   text-align: center;
+  font-family: 'Helvetica', sans-serif;
 }
 
 .book {
@@ -14,43 +15,47 @@
   /*box-shadow: 3px 3px 5px 6px #ccc;*/
 }
 
-.modal-box{
-  z-index: 4;
 
+.navbar-form {
+  margin-top: 0;
 }
 
-#popover {
-
-}
-
+/* queue button */
 #queue-it {
   margin-left: 10px;
 }
 
-#discussion-text {
+#convo-hed {
   margin-top: 50px;
+  height: 100px;
+  background-color: #33353D;
+  color: white;
 }
+
 
 .form-group {
   color: white;
   margin-top: 30px;
 }
 
-.row-discussions {
+#discussions {
   height: 700px;
-  background-color: #33353D ;
+  background-color: #33353D;
 }
+
+.all-comments h4 {
+  border-bottom: 1px solid grey;
+}
+
+
 
 .all-comments {
   margin-top: 55px;
   padding: 15px;
   background-color: white;
-  border: 1px solid grey;
+  /*border: 1px solid grey;*/
   height: 500px;
   overflow: scroll;
   overflow-x: hidden;
 }
 
-.indiv-comment {
-  border-bottom: 1px solid grey;
-}

@@ -155,6 +155,19 @@ $(document).ready(function() {
 
   });
 
+  $("#discussions").hide();
+
+  $(".comment-body").hide();
+
+  $(".comment-link").on("click", function(e) {
+    e.preventDefault();
+    $(".comment-body").show();
+  });
+
+  $("#spoilers").on("click", function(e) {
+    e.preventDefault();
+     $("#discussions").show();
+  });
 
 
 

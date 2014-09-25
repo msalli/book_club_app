@@ -75,12 +75,7 @@ class BooksController < ApplicationController
           p "THIS IS THE RES", res
             link = res["DetailPageURL"]
             ap link
-            if !res["ItemAttributes"]["Author"][0]
-              author = res["ItemAttributes"]["Author"]
-            else
-              author = res["ItemAttributes"]["Author"][0]
-            end
-
+            author = res["ItemAttributes"]["Author"]
             ap author
             title = res["ItemAttributes"]["Title"]
             ap title
@@ -106,6 +101,7 @@ class BooksController < ApplicationController
 
   def show
     @book
+    @books = Book.count
 
     if current_user
       @this_book = current_user.favorites.find_by_book_id(params[:id])

@@ -1,11 +1,5 @@
 <%= render "nav", locals: { user: @user } %>
-
-  <div class="panel-body">
-    <div class="jumbotron">
-      <div class="container-fluid">
-        <h1>book club</h1>
-      </div>
-    </div>
+<%= render "header"  %>
 
     <% flash.each do |k, v|%>
       <div class="alert alert-success" role="alert">
@@ -13,19 +7,6 @@
       </div>
     <% end %>
 
-    <div class="row">
-      <div class="col-xs-4 col-xs-offset-8">
-      <%= form_for @search, method: :get, url: '/search/new', html: {id: 'search-bar'} do |f| %>
-        <div class="form-group">
-          <label>Find a book: </label>
-          <%= f.text_field :search, class: "search-db form-control" %>
-        </div>
-        <div class="form-group">
-          <button type="submit" class="form-control btn btn-default" data-toggle="modal" data-target="#myModal">Search</button>
-        </div>
-      <% end %>
-      </div>
-    </div>
 
     <div class="modal" id="myModal">
       <div class="modal-dialog">
@@ -38,8 +19,18 @@
             <p class="error"></p>
             <p class="book-title"></p>
             <p class="book-author"></p>
+
+            <%= form_for @book do |f| %>
+            <div class="form-group">
+              <%= f.text_field :title, class: "search-az form-control", placeholder: "Search it on Amazon" %>
+            </div>
+            <div class="form-group">
+              <%= f.submit "Search Book", class: "btn btn-default"%>
+            </div>
+            <% end %>
           </div>
           <div class="modal-footer">
+             <!-- this form searches using the amazon api -->
             <button type="button" class="btn btn-default" id="modal-read">I've Read It!</button>
             <button type="button" class="btn btn-warning" id="modal-queue">Add to Queue</button>
           </div>
@@ -55,10 +46,6 @@
       </div>
     </div>
 
-    <!-- this form searches using the amazon api -->
-    <%= form_for @book do |f| %>
-      <%= f.text_field :title, class: "search-az" %>
-      <%= f.submit "Search Book" %>
-    <% end %>
+
 
   </div>
