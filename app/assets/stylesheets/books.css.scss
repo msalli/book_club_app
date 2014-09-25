@@ -1,37 +1,52 @@
+.panel-body {
+  color: #373740;
+}
+
+/* HEADER */
 .header {
-  height: 275px;
+  width: 100%;
+  height: 325px;
+  background-color: #DBDDFF;
+  text-align: center;
+  /*font-family: 'Playfair Display', serif;*/
+  font-family: 'Lato', sans-serif;
+  margin: 0;
 }
 
 .header h1 {
   font-size: 65px;
-  text-align: center;
-  font-family: 'Helvetica', sans-serif;
+  padding-top: 20px;
 }
 
+
+/* BOOKS ON INDEX */
 .book {
   height: 265px;
   width: 175px;
   margin: 10px;
-  /*box-shadow: 3px 3px 5px 6px #ccc;*/
 }
 
+/* BOOK SHOW PAGE */
 
-.navbar-form {
-  margin-top: 0;
+/* buttons */
+#read-button {
+  width: 150px;
 }
 
-/* queue button */
-#queue-it {
-  margin-left: 10px;
+#queue-button {
+  width: 150px;
 }
+
+/* discussions section */
 
 #convo-hed {
   margin-top: 50px;
-  height: 100px;
-  background-color: #33353D;
-  color: white;
+  color: #373740;
 }
 
+#convo-hed a {
+  color: #373740;
+}
 
 .form-group {
   color: white;
@@ -40,20 +55,27 @@
 
 #discussions {
   height: 700px;
-  background-color: #33353D;
+  background-color: #8C8DA3;
 }
+
+.indiv-comment {
+  padding-top: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-top: 1px dotted #373740;
+}
+
 
 .all-comments h4 {
-  border-bottom: 1px solid grey;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #373740;
 }
-
-
 
 .all-comments {
   margin-top: 55px;
   padding: 15px;
   background-color: white;
-  /*border: 1px solid grey;*/
   height: 500px;
   overflow: scroll;
   overflow-x: hidden;

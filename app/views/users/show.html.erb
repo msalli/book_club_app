@@ -1,5 +1,4 @@
 <%= render "books/nav" %>
-<%= render "books/header"  %>
 
 <div class="container-fluid">
   <div class="row" id="row-1">
@@ -13,6 +12,22 @@
     <div class="col-xs-10 col-xs-offset-1">
       <h3><%= @user.first_name %>'s Library</h3>
 
+      <h4>In <%= @user.first_name %>'s Queue: </h4>
+      <% @favorites.each do |fave| %>
+        <% if fave.status == "queue" %>
+          <% queue = fave.book_id  %>
+          <% @books.each do |book| %>
+            <% if book.id == queue %>
+              <a href="/books/<%= book.id %>"><img class="book" src="<%= book.lg_img %>"></a>
+            <% end %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
       <h4>Past Books: </h4>
       <% @favorites.each do |fave| %>
         <% if fave.status == "read" %>
@@ -24,13 +39,6 @@
           <% end %>
         <% end %>
       <% end %>
-
-
-
-
-
-
-
     </div>
   </div>
 </div>
