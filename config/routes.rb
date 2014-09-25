@@ -17,6 +17,8 @@ Rails.application.routes.draw do
 
   resources :users
 
+  resources :search
+
   resources :books do
     resources :favorites
   end

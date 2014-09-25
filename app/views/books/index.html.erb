@@ -1,11 +1,5 @@
 <%= render "nav", locals: { user: @user } %>
-
-  <div class="panel-body">
-    <div class="jumbotron">
-      <div class="container-fluid">
-        <h1>book club</h1>
-      </div>
-    </div>
+<%= render "header"  %>
 
     <% flash.each do |k, v|%>
       <div class="alert alert-success" role="alert">
@@ -13,11 +7,36 @@
       </div>
     <% end %>
 
-    <%= form_for @book do |f| %>
-      <%= f.text_field :title %>
-      <%= f.submit "Search Book" %>
-    <% end %>
 
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+         <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h4 class="modal-title" id="myModalLabel">Results:</h4>
+          </div>
+          <div class="modal-body">
+            <p class="error"></p>
+            <p class="book-title"></p>
+            <p class="book-author"></p>
+
+            <%= form_for @book do |f| %>
+            <div class="form-group">
+              <%= f.text_field :title, class: "search-az form-control", placeholder: "Search it on Amazon" %>
+            </div>
+            <div class="form-group">
+              <%= f.submit "Search Book", class: "btn btn-default"%>
+            </div>
+            <% end %>
+          </div>
+          <div class="modal-footer">
+             <!-- this form searches using the amazon api -->
+            <button type="button" class="btn btn-default" id="modal-read">I've Read It!</button>
+            <button type="button" class="btn btn-warning" id="modal-queue">Add to Queue</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div class="row-center">
       <div class="col-xs-12 books">
@@ -26,5 +45,7 @@
         <% end %>
       </div>
     </div>
+
+
 
   </div>

@@ -1,11 +1,17 @@
 <%= render "nav" %>
+<%= render "header"  %>
 
   <div class="panel-body">
-    <div class="jumbotron">
-      <div class="container-fluid">
-        <h1>book club</h1>
-      </div>
-    </div>
+
+
+    <% if @book.id != @books %>
+      <a href="/books/<%= @book.id + 1%>">Next</a>
+    <% end %>
+
+    <% if @book.id != 1 %>
+      <a href="/books/<%= @book.id - 1%>">Previous</a>
+    <% end %>
+
 
     <div class="row">
       <div class="row-center">
@@ -16,7 +22,7 @@
         <h3><%= @book.title %></h3>
         <h4><%= @book.author %></h4>
         <p><strong>Description:</strong></p>
-        <p>Post-ironic dreamcatcher Brooklyn art party. Next level Brooklyn Truffaut quinoa dreamcatcher, art party bicycle rights fixie sriracha Vice ugh pork belly sartorial. Tumblr ugh Brooklyn leggings. IPhone viral ethical fashion axe, asymmetrical bicycle rights tattooed hoodie meggings normcore fingerstache +1. Pug wolf vinyl Cosby sweater Echo Park. Dreamcatcher ugh brunch, cardigan Shoreditch Echo Park fashion axe church-key Wes Anderson pour-over. Pickled food truck swag, locavore banh mi meggings Wes Anderson brunch trust fund.</p>
+        <p><%=raw @book.description  %></p>
       </div>
 
       <div class="col-xs-3 col-xs-offset-1">
@@ -69,45 +75,49 @@
     </div>
 
     <div class="row">
-      <div class="col-xs-3 col-xs-offset-1" id="discussion-text">
-        <h3>Join the discussion: </h3>
+      <div class="col-xs-12" id="convo-hed">
+        <div class="col-xs-3 col-xs-offset-1" id="discussion-text">
+        <h3>Spoilers below!</h3>
+        <a href="javascript:void(0);" id="spoilers"><h5>Read the book? Join the discussion!</h5></a>
+      </div>
       </div>
     </div>
 
-    <div class="row-discussions">
-      <div class="col-xs-4 col-xs-offset-1">
-        <div class="form-group">
-          <%= form_for ([@book, @comment]) do |f| %>
+    <div class="row" id="discussions">
+      <div class="col-xs-12">
+        <div class="col-xs-4 col-xs-offset-1">
           <div class="form-group">
-            <%= f.label :title, "Start a new discussion:" %>
-            <%= f.text_field :title, class: "form-control", id: "title-val" %>
-          </div>
-          <div class="form-group">
-            <%= f.label :body, "Include a comment:" %>
-            <%= f.text_area :body, class: "form-control", id: "body-val" %>
-          </div>
-          <div class="form-group">
-            <%= f.submit "Post", class: "form-control btn btn-default" %>
-          </div>
-          <% end %>
-        </div>
-      </div>
-
-      <div class="col-xs-6">
-        <div class="all-comments">
-          <div class="indiv-comment">
-            <strong><p class="comment-title"></p></strong>
-            <p class="comment-body"></p>
-
-            <% @book.comments.each do |comment| %>
-              <strong><p><%= comment.title %></p></strong>
-              <p><%= comment.body %></p>
+            <%= form_for ([@book, @comment]) do |f| %>
+            <div class="form-group">
+              <%= f.label :title, "Start a new discussion:" %>
+              <%= f.text_field :title, class: "form-control", id: "title-val" %>
+            </div>
+            <div class="form-group">
+              <%= f.label :body, "Include a comment:" %>
+              <%= f.text_area :body, class: "form-control", id: "body-val" %>
+            </div>
+            <div class="form-group">
+              <%= f.submit "Post", class: "form-control btn btn-default" %>
+            </div>
             <% end %>
           </div>
+        </div>
 
+        <div class="col-xs-6">
+          <div class="all-comments">
+           <h4>What people are talking about: </h4>
+
+          <% @book.comments.each do |comment| %>
+            <div class="indiv-comment">
+              <a href="javascript:void(0);" class="comment-link"><%= comment.title %></a>
+              <p class="comment-body"><%= comment.body %></p>
+            </div>
+          <% end %>
+
+
+
+          </div>
         </div>
       </div>
-
-
     </div>
 

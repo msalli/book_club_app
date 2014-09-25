@@ -24,7 +24,7 @@
         <%=  f.password_field :password, class: "form-control" %>
       </div>
       <div class="form-group">
-        <label>Add a profile picture: </label>
+        <%= f.label :image_url, "Profile picture" %>
         <%= f.text_field :image_url, :placeholder => "URL", class: "form-control" %>
       </div>
       <div class="form-group">

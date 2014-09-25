@@ -39,157 +39,298 @@ users = User.create([{
   }])
 
 
-    books = Book.create([{
-      title: "The Goldfinch",
-      author: "Donna Tartt",
-      lg_img: "http://ecx.images-amazon.com/images/I/41daf5o2wYL.jpg",
-      link: "http://www.amazon.com/The-Goldfinch-Pulitzer-National-Finalists/dp/0316055433%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0316055433"
-      },
-      {
-      title: "Pride and Prejudice",
-      author: "Jane Austen",
-      lg_img: "http://ecx.images-amazon.com/images/I/51N-Hpq0NNL.jpg",
-      link: "http://www.amazon.com/Pride-Prejudice-Dover-Thrift-Editions/dp/0486284735%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0486284735"
-      },
-      {
-      title: "Gone Girl: A Novel",
-      author: "Gillian Flynn",
-      lg_img: "http://ecx.images-amazon.com/images/I/41yZreG2lcL.jpg",
-      link: "http://www.amazon.com/Gone-Girl-Novel-Gillian-Flynn/dp/0307588378%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0307588378"
-      },
-      {
-      title: "Personal (Jack Reacher)",
-      author: "Lee Child",
-      lg_img: "http://ecx.images-amazon.com/images/I/513JFKFmN7L.jpg",
-      link: "http://www.amazon.com/Personal-Jack-Reacher-Lee-Child/dp/0804178747%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0804178747"
-      },
-      {
-      title: "The Witch with No Name (Hollows)",
-      author: "Kim Harrison",
-      lg_img: "http://ecx.images-amazon.com/images/I/51vq5UjxLoL.jpg",
-      link: "http://www.amazon.com/The-Witch-No-Name-Hollows/dp/006195795X%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D006195795X"
-      },
-      {
-      title: "The Alchemist",
-      author: "Paulo Coelho",
-      lg_img: "http://ecx.images-amazon.com/images/I/41BkEX-7CUL.jpg",
-      link: "http://www.amazon.com/The-Alchemist-Paulo-Coelho/dp/0061122416%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0061122416"
-      },
-      {
-      title: "Outlander",
-      author: "Diana Gabaldon",
-      lg_img: "http://ecx.images-amazon.com/images/I/41YqBqzEQHL.jpg",
-      link: "http://www.amazon.com/Outlander-Diana-Gabaldon/dp/0440212561%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0440212561"
-      },
-      {
-      title: "Mean Streak",
-      author: "Sandra Brown",
-      lg_img: "http://ecx.images-amazon.com/images/I/51teSFEPCWL.jpg",
-      link: "http://www.amazon.com/Mean-Streak-Sandra-Brown/dp/1455581127%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1455581127"
-      },
-      {
-      title: "Big Little Lies",
-      author: "Liane Moriarty",
-      lg_img: "http://ecx.images-amazon.com/images/I/51vJfJFQfjL.jpg",
-      link: "http://www.amazon.com/Big-Little-Lies-Liane-Moriarty/dp/0399167064%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0399167064"
-      },
-      {
-      title: "The King's Curse (Cousins' War)",
-      author: "Philippa Gregory",
-      lg_img: "http://ecx.images-amazon.com/images/I/51ChY9YQPuL.jpg",
-      link: "http://www.amazon.com/The-Kings-Curse-Cousins-War/dp/1451626118%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1451626118"
-      },
-      {
-      title: "The Children Act",
-      author: "Ian McEwan",
-      lg_img: "http://ecx.images-amazon.com/images/I/51qg0-%2BZB7L.jpg",
-      link: "http://www.amazon.com/The-Children-Act-Ian-McEwan/dp/0385539703%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0385539703"
-      }])
-
-  books2 = Book.create([{
-    :title => "The Great Gatsby",
-    :author => "F. Scott Fitzgerald",
-    :lg_img => "http://ecx.images-amazon.com/images/I/51tmGgkv3iL.jpg",
-    :link => "http://www.amazon.com/The-Great-Gatsby-Scott-Fitzgerald/dp/0743273567%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0743273567"
-    },
-    {
-    :title => "The Grapes of Wrath",
-    :author => "John Steinbeck",
-    :lg_img => "http://ecx.images-amazon.com/images/I/41vv8-S5n2L.jpg",
-    :link => "http://www.amazon.com/The-Grapes-Wrath-John-Steinbeck/dp/0143039431%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0143039431"
-    },
-    {
-    :title => "Lolita",
-    :author => "Vladimir Nabokov",
-    :lg_img => "http://ecx.images-amazon.com/images/I/41gMT3BaWiL.jpg",
-    :link => "http://www.amazon.com/Lolita-Vladimir-Nabokov/dp/0679723161%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0679723161"
-    },
-    {
-    :title => "The Sound and the Fury: The Corrected Text",
-    :author => "William Faulkner",
-    :lg_img => "http://ecx.images-amazon.com/images/I/41LVQSI2RcL.jpg",
-    :link => "http://www.amazon.com/The-Sound-Fury-Corrected-Text/dp/0679732241%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0679732241"
-    },
-    {
-    :title => "Anna Karenina",
-    :author => "Leo Tolstoy",
-    :lg_img => "http://ecx.images-amazon.com/images/I/51vPf2CfSEL.jpg",
-    :link => "http://www.amazon.com/Anna-Karenina-Leo-Tolstoy/dp/0143035002%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0143035002"
-    },
-    {
-    :title => "This One Is Mine: A Novel",
-    :author => "Maria Semple",
-    :lg_img => "http://ecx.images-amazon.com/images/I/41H6ZtbUOsL.jpg",
-    :link => "http://www.amazon.com/This-One-Is-Mine-Novel/dp/031603133X%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D031603133X"
-    },
-    {
-    :title => "Vampires in the Lemon Grove: And Other Stories (Vintage Contemporaries)",
-    :author => "Karen Russell",
-    :lg_img => "http://ecx.images-amazon.com/images/I/51ABYrZLkrL.jpg",
-    :link => "http://www.amazon.com/Vampires-Lemon-Grove-Stories-Contemporaries/dp/0307947475%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0307947475"
-    },
-    {
-    :title => "The Vacationers: A Novel",
-    :author => "Emma Straub",
-    :lg_img => "http://ecx.images-amazon.com/images/I/51HRvrNYdIL.jpg",
-    :link => "http://www.amazon.com/The-Vacationers-Novel-Emma-Straub/dp/1594631573%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1594631573"
-    },
-    {
-    :title => "The Fault in Our Stars",
-    :author => "John Green",
-    :lg_img => "http://ecx.images-amazon.com/images/I/51VlKD1aucL.jpg",      :link => "http://www.amazon.com/The-Fault-Stars-John-Green/dp/014242417X%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D014242417X"
-    },
-    {
-    :title => "Since You've Been Gone",
-    :author => "Morgan Matson",
-    :lg_img => "http://ecx.images-amazon.com/images/I/61CME2skESL.jpg",
-    :link => "http://www.amazon.com/Since-Youve-Been-Morgan-Matson/dp/1442435003%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1442435003"
-    },
-    {
-    :title => "The One and Only Ivan",
-    :author => "Katherine Applegate",
-    :lg_img => "http://ecx.images-amazon.com/images/I/41wE-z7ixPL.jpg",
-    :link => "http://www.amazon.com/The-Only-Ivan-Katherine-Applegate/dp/0061992259%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0061992259"
-    },
-    {
-    :title => "The Rosie Project: A Novel",
-    :author => "Graeme Simsion",
-    :lg_img => "http://ecx.images-amazon.com/images/I/514ViPVcPVL.jpg",
-    :link => "http://www.amazon.com/The-Rosie-Project-A-Novel/dp/1476729093%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1476729093"
-    },
-    {
-    :title => "Eat, Pray, Love: One Woman's Search for Everything Across Italy, India and Indonesia",
-    :author => "Elizabeth Gilbert",
-    :lg_img => "http://ecx.images-amazon.com/images/I/4159o9E2SLL.jpg",
-    :link => "http://www.amazon.com/Eat-Pray-Love-Everything-Indonesia/dp/0143038419%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0143038419"
-    },
-    {
-    :title => "We Were Liars",
-    :author => "E. Lockhart",
-    :lg_img => "http://ecx.images-amazon.com/images/I/51UX7hdSdJL.jpg",
-    :link => "http://www.amazon.com/We-Were-Liars-E-Lockhart/dp/038574126X%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D038574126X"
-    }])
-
-
-
+books = Book.create([{
+  :title => "The Goldfinch: A Novel (Pulitzer Prize for Fiction) (National Book Critics Circle Award: Fiction Finalists)",
+  :author => "Donna Tartt",
+  :description => "<strong>WINNER OF THE PULITZER PRIZE</strong><br><br>\"<i>The Goldfinch</i> is a rarity that comes along perhaps half a dozen times per decade, a smartly written literary novel that connects with the heart as well as the mind....Donna Tartt has delivered an extraordinary work of fiction.\"--<strong>Stephen King, <i>The New York Times Book Review</i></strong><br><br>Theo Decker, a 13-year-old New Yorker, miraculously survives an accident that kills his mother. Abandoned by his father, Theo is taken in by the family of a wealthy friend. Bewildered by his strange new home on Park Avenue, disturbed by schoolmates who don't know how to talk to him, and tormented above all by his longing for his mother, he clings to the one thing that reminds him of her: a small, mysteriously captivating painting that ultimately draws Theo into the underworld of art.<br><br>As an adult, Theo moves silkily between the drawing rooms of the rich and the dusty labyrinth of an antiques store where he works. He is alienated and in love--and at the center of a narrowing, ever more dangerous circle.<br><br><em>The Goldfinch</em> is a mesmerizing, stay-up-all-night and tell-all-your-friends triumph, an old-fashioned story of loss and obsession, survival and self-invention, and the ruthless machinations of fate.",
+  :lg_img => "http://ecx.images-amazon.com/images/I/41daf5o2wYL.jpg",
+  :link => "http://www.amazon.com/The-Goldfinch-Pulitzer-National-Finalists/dp/0316055433%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0316055433"
+  },
+  {
+  :title => "Gone Girl: A Novel",
+  :author => "Gillian Flynn",
+  :description => "<p><b>THE #1 <i>NEW YORK TIMES</i> BESTSELLER<br><br></b>On a warm summer morning in North Carthage, Missouri, it is Nick and Amy Dunne’s fifth wedding anniversary. Presents are being wrapped and reservations are being made when Nick’s clever and beautiful wife disappears. Husband-of-the-Year Nick isn’t doing himself any favors with cringe-worthy daydreams about the slope and shape of his wife’s head, but passages from Amy's diary reveal the alpha-girl perfectionist could have put anyone dangerously on edge<b>.</b> Under mounting pressure from the police and the media—as well as Amy’s fiercely doting parents—the town golden boy parades an endless series of lies, deceits, and inappropriate behavior. Nick is oddly evasive, and he’s definitely bitter—but is he really a killer? </p>",
+  :lg_img => "http://ecx.images-amazon.com/images/I/41yZreG2lcL.jpg",
+  :link => "http://www.amazon.com/Gone-Girl-Novel-Gillian-Flynn/dp/0307588378%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0307588378"
+  },
+  {
+  :title => "Girls in White Dresses (Vintage Contemporaries)",
+  :author => "Jennifer Close",
+  :description => "Isabella, Mary, and Lauren feel like everyone they know is getting married. On Sunday after Sunday, at bridal shower after bridal shower, they coo over toasters, collect ribbons and wrapping paper, eat minuscule sandwiches and cakes. They wear pastel dresses and drink champagne by the case, but amid the celebration these women have their own lives to contend with: Isabella is working a dead-end job, Mary is dating a nice guy with an awful mother, and Lauren is waitressing at a midtown bar and wondering why she's attracted to the sleazy bartender. <br><br>With a wry sense of humor, Jennifer Close brings us through those thrilling, bewildering years of early adulthood as she pulls us inside the circle of these friends, perfectly capturing the wild frustrations and soaring joys of modern life.",
+  :lg_img => "http://ecx.images-amazon.com/images/I/41Y0xCnJqqL.jpg",
+  :link => "http://www.amazon.com/Girls-White-Dresses-Vintage-Contemporaries/dp/0307743691%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0307743691"
+  },
+  {
+  :title => "The Alchemist",
+  :author => "Paulo Coelho",
+  :description => "<p><em>The Alchemist</em> by Paulo Coelho continues to change the lives of its readers forever. With more than two million copies sold around the world, <em>The Alchemist</em> has established itself as a modern classic, universally admired.</p><p>Paulo Coelho's masterpiece tells the magical story of Santiago, an Andalusian shepherd boy who yearns to travel in search of a worldly treasure as extravagant as any ever found.</p><p>The story of the treasures Santiago finds along the way teaches us, as only a few stories can, about the essential wisdom of listening to our hearts, learning to read the omens strewn along life's path, and, above all, following our dreams.</p>",
+  :lg_img => "http://ecx.images-amazon.com/images/I/41BkEX-7CUL.jpg",
+  :link => "http://www.amazon.com/The-Alchemist-Paulo-Coelho/dp/0061122416%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0061122416"
+  },
+  {
+  :title => "The Children Act",
+  :author => "Ian McEwan",
+  :description => "Fiona Maye is a leading High Court judge who presides over cases in the family court. She is renowned for her fierce intelligence, exactitude, and sensitivity. But her professional success belies private sorrow and domestic strife. There is the lingering regret of her childlessness, and now her marriage of thirty years is in crisis.<br><br>At the same time, she is called on to try an urgent case: Adam, a beautiful seventeen-year-old boy, is refusing for religious reasons the medical treatment that could save his life, and his devout parents echo his wishes. Time is running out. Should the secular court overrule sincerely expressed faith? In the course of reaching a decision, Fiona visits Adam in the hospital—an encounter that stirs long-buried feelings in her and powerful new emotions in the boy. Her judgment has momentous consequences for them both.",
+  :lg_img => "http://ecx.images-amazon.com/images/I/41v6a9NhMmL.jpg",
+  :link => "http://www.amazon.com/The-Children-Act-Ian-McEwan/dp/0385539703%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0385539703"
+  },
+  {
+  :title => "This One Is Mine: A Novel",
+  :author => "Maria Semple",
+  :description => "Violet Parry is living the quintessential life of luxury in the Hollywood Hills with David, her rock-and-roll manager husband, and her darling toddler, Dot. She has the perfect life--except that she's deeply unhappy. David expects the world of Violet but gives little of himself in return. When she meets Teddy, a roguish small-time bass player, Violet comes alive, and soon she's risking everything for the chance to find herself again. Also in the picture are David's hilariously high-strung sister, Sally, on the prowl for a successful husband, and Jeremy, the ESPN sportscaster savant who falls into her trap. For all their recklessness, Violet and Sally will discover that David and Jeremy have a few surprises of their own. THIS ONE IS MINE is a compassionate and wickedly funny satire about our need for more--and the often disastrous choices we make in the name of happiness.",
+  :lg_img => "http://ecx.images-amazon.com/images/I/41H6ZtbUOsL.jpg",
+  :link => "http://www.amazon.com/This-One-Is-Mine-Novel/dp/031603133X%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D031603133X"
+  },
+  {
+  :title => "The Vacationers: A Novel",
+  :author => "Emma Straub",
+  :description => "<div>  <b>\"Delicious . . . richly riveting . . . <i>The Vacationers </i>offers all the delights of a fluffy, read-it-with-sunglasses-on-the-beach read, made substantial by the exceptional wit, insight, intelligence and talents of its author.”\u0097<i>People </i>(four stars)</b><br>  <br>   An irresistible, deftly observed novel about the secrets, joys, and jealousies that rise to the surface over the course of an American family’s two-week stay in Mallorca.<br>  <br>   For the Posts, a two-week trip to the Balearic island of Mallorca with their extended family and friends is a celebration: Franny and Jim are observing their thirty-fifth wedding anniversary, and their daughter, Sylvia, has graduated from high school. The sunlit island, its mountains and beaches, its tapas and tennis courts, also promise an escape from the tensions simmering at home in Manhattan. But all does not go according to plan: over the course of the vacation, secrets come to light, old and new humiliations are experienced, childhood rivalries resurface, and ancient wounds are exacerbated.<br>  <br>   This is a story of the sides of ourselves that we choose to show and those we try to conceal, of the ways we tear each other down and build each other up again, and the bonds that ultimately hold us together. With wry humor and tremendous heart, Emma Straub delivers a richly satisfying story of a family in the midst of a maelstrom of change, emerging irrevocably altered yet whole.<br>    </div>",
+  :lg_img => "http://ecx.images-amazon.com/images/I/51HRvrNYdIL.jpg",
+  :link => "http://www.amazon.com/The-Vacationers-Novel-Emma-Straub/dp/1594631573%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1594631573"
+  },
+  {
+  :title => "The Fault in Our Stars",
+  :author => "John Green",
+  :description => "<div>Despite the tumor-shrinking medical miracle that has bought her a few years, Hazel has never been anything but terminal, her final chapter inscribed upon diagnosis. But when a gorgeous plot twist named Augustus Waters suddenly appears at Cancer Kid Support Group, Hazel’s story is about to be completely rewritten.<br /> <br /> Insightful, bold, irreverent, and raw, The Fault in Our Stars is award-winning-author John Green’s most ambitious and heartbreaking work yet, brilliantly exploring the funny, thrilling, and tragic business of being alive and in love. <br /><br />Opens in theaters on June 6, 2014<br /> TODAY Book Club pick<br /> TIME Magazine’s #1 Fiction Book of 2012<br /> <br /> -Millions of copies sold-<br />  <br /> #1 New York Times Bestseller<br /> #1 Wall Street Journal Bestseller<br /> #1 USA Today Bestseller<br /> #1 International Bestseller<br /> #1 Indie Bestseller<br /> <br /></div>",
+  :lg_img => "http://ecx.images-amazon.com/images/I/51VlKD1aucL.jpg",
+  :link => "http://www.amazon.com/The-Fault-Stars-John-Green/dp/014242417X%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D014242417X"
+  },
+  {
+  :title => "Since You've Been Gone",
+  :author => "Morgan Matson",
+  :description => "Emily is about to take some risks and have the most unexpected summer ever in this new novel from the bestselling author of <I>Second Chance Summer </I>and <I>Amy and Roger’s Epic Detour</I>.<BR><BR>Before Sloane, Emily didn’t go to parties, she barely talked to guys, and she didn’t do anything crazy. Enter Sloane, social tornado and the best kind of best friend—someone who yanks you out of your shell.<BR> <BR>But right before what should have been an epic summer, Sloane just…disappears. No note. No calls. No texts. No Sloane. There’s just a random to-do list with thirteen bizarre tasks that Emily would never try. But what if they can lead her to Sloane?<BR> <BR><I>Apple picking at night?</I> Okay, easy enough.<BR> <BR><I>Dance until dawn?</I> Sure. Why not?<BR> <BR><I>Kiss a stranger?</I> Wait…what?<BR> <BR>Getting through Sloane’s list will mean a lot of firsts, and with a whole summer ahead of her—and with the unexpected help of the handsome Frank Porter—who knows what she’ll find.<BR> <BR><I>Go Skinny Dipping?</I> Um…",
+  :lg_img => "http://ecx.images-amazon.com/images/I/61CME2skESL.jpg",
+  :link => "http://www.amazon.com/Since-Youve-Been-Morgan-Matson/dp/1442435003%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1442435003"
+  },
+  {
+  :title => "The One and Only Ivan",
+  :author => "Katherine Applegate",
+  :description => "<p>Winner of the 2013 Newbery Medal and a #1 <em>New York Times</em> bestseller, this stirring and unforgettable novel from renowned author Katherine Applegate celebrates the transformative power of unexpected friendships. Inspired by the true story of a captive gorilla known as Ivan, this illustrated novel is told from the point-of-view of Ivan himself. </p><p>Having spent 27 years behind the glass walls of his enclosure in a shopping mall, Ivan has grown accustomed to humans watching him. He hardly ever thinks about his life in the jungle. Instead, Ivan occupies himself with television, his friends Stella and Bob, and painting. But when he meets Ruby, a baby elephant taken from the wild, he is forced to see their home, and his art, through new eyes.</p><p><em>The One and Only Ivan</em> was hailed as a best book of the year by <em>Kirkus</em>, <em>School Library Journal</em>, and Amazon, demonstrating it is a true classic in the making. In the tradition of timeless stories like <em>Charlotte's Web</em> and <em>Stuart Little</em>, Katherine Applegate blends humor and poignancy to create Ivan's unforgettable first-person narration in a story of friendship, art, and hope. An author's note depicts the differences between the fictional story and true events.</p><p>Supports the Common Core State Standards</p>",
+  :lg_img => "http://ecx.images-amazon.com/images/I/41wE-z7ixPL.jpg",
+  :link => "http://www.amazon.com/The-Only-Ivan-Katherine-Applegate/dp/0061992259%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0061992259"
+  },
+  {
+  :title => "The Rosie Project: A Novel",
+  :author => "Graeme Simsion",
+  :description => "Now in paperback, the international bestselling romantic comedy “bursting with warmth, emotional depth, and…humor,” (<I>Entertainment</I> <I>Weekly</I>) featuring the oddly charming, socially challenged genetics professor, Don, as he seeks true love.<BR><BR>The art of love is never a science: Meet Don Tillman, a brilliant yet socially inept professor of genetics, who’s decided it’s time he found a wife. In the orderly, evidence-based manner with which Don approaches all things, he designs the Wife Project to find his perfect partner: a sixteen-page, scientifically valid survey to filter out the drinkers, the smokers, the late arrivers. <BR> <BR>Rosie Jarman possesses all these qualities. Don easily disqualifies her as a candidate for The Wife Project (even if she is “quite intelligent for a barmaid”). But Don is intrigued by Rosie’s own quest to identify her biological father. When an unlikely relationship develops as they collaborate on The Father Project, Don is forced to confront the spontaneous whirlwind that is Rosie―and the realization that, despite your best scientific efforts, you don’t find love, it finds you.<BR> <BR>Arrestingly endearing and entirely unconventional, Graeme Simsion’s distinctive debut “navigates the choppy waters of adult relationships, both romantic and platonic, with a fresh take (<I >USA TODAY</I>). “Filled with humor and plenty of heart, <I >The Rosie Project</I> is a delightful reminder that all of us, no matter how we’re wired, just want to fit in” (<I >Chicago Tribune</I>).",
+  :lg_img => "http://ecx.images-amazon.com/images/I/514ViPVcPVL.jpg",
+  :link => "http://www.amazon.com/The-Rosie-Project-A-Novel/dp/1476729093%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1476729093"
+  },
+  {
+  :title => "Eat, Pray, Love: One Woman's Search for Everything Across Italy, India and Indonesia",
+  :author => "Elizabeth Gilbert",
+  :description => "<div>  <b>A transformational journey through Italy, India, and Bali searching for pleasure and devotion\u0097the massive bestseller from the author of <i>The Signature of All Things</i></b><br>  <br>   This beautifully written, heartfelt memoir touched a nerve among both readers and reviewers. Elizabeth Gilbert tells how she made the difficult choice to leave behind all the trappings of modern American success (marriage, house in the country, career) and find, instead, what she truly wanted from life. Setting out for a year to study three different aspects of her nature amid three different cultures, Gilbert explored the art of pleasure in Italy and the art of devotion in India, and then a balance between the two on the Indonesian island of Bali. By turns rapturous and rueful, this wise and funny author (whom <i>Booklist</i> calls \u0093Anne Lamott’s hip, yoga- practicing, footloose younger sister”) is poised to garner yet more adoring fans.</div>",
+  :lg_img => "http://ecx.images-amazon.com/images/I/4159o9E2SLL.jpg",
+  :link => "http://www.amazon.com/Eat-Pray-Love-Everything-Indonesia/dp/0143038419%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0143038419"
+  },
+  {
+  :title => "We Were Liars",
+  :author => "E. Lockhart",
+  :description => "<p><b>A <i>New York Times</i> Bestseller</b><br><br><b>\"Haunting, sophisticated . . . a novel so twisty and well-told that it will appeal to older readers as well as to adolescents</b>.\"--<i>Wall Street Journal<br></i><br><b>\"A rich, stunning summer mystery with a sharp twist that will leave you dying to talk about the book with a pal or ten</b>.\"--Parade.com<br><br><b>\"Thrilling, beautiful, and blisteringly smart, <i>We Were Liars</i> is utterly unforgettable.\"</b> - John Green, #1 <i>New York Times</i> bestselling author of <i>The Fault in Our Stars<br></i></p><p><b>\"You’re going to want to remember the title. <i>Liars</i> details the summers of a girl who harbors a dark secret, and delivers a satisfying, but shocking twist ending</b>.\" <br>- Breia Brissey, <i>Entertainment Weekly</i><br><br>A beautiful and distinguished family.<br>A private island.<br>A brilliant, damaged girl; a passionate, political boy.<br>A group of four friends—the Liars—whose friendship turns destructive.<br>A revolution. An accident. A secret.<br>Lies upon lies.<br>True love.<br>The truth.<br> <br><i>We Were Liars </i>is a modern, sophisticated suspense novel from <i>New York Times</i> bestselling author, National Book Award finalist, and Printz Award honoree E. Lockhart. <br>Read it.<br>And if anyone asks you how it ends, just LIE.<br><br><br><b>\"An ambitious novel with an engaging voice, a clever plot and some terrific writing</b>.\"--<i>New York Times Book Review</i><br><br></p><p>\"<b>No one should be talking about the shocking twist ending. What we can talk about is...[Lockhart's] razor-sharp portrayal of a family for whom keeping up appearances is paramount and, ultimately, tragic</b>.\"--<i>The Chicago Tribune</i></p>",
+  :lg_img => "http://ecx.images-amazon.com/images/I/51UX7hdSdJL.jpg",
+  :link => "http://www.amazon.com/We-Were-Liars-E-Lockhart/dp/038574126X%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D038574126X"
+  },
+  {
+  :title => "The Book Thief",
+  :author => "Markus Zusak",
+  :description => "The extraordinary #1 <i>New York Times</i> bestseller that is now a major motion picture, Markus Zusak's unforgettable story is about the ability of books to feed the soul.<br><br>It is 1939. Nazi Germany. The country is holding its breath. Death has never been busier, and will become busier still.<br> <br>Liesel Meminger is a foster girl living outside of Munich, who scratches out a meager existence for herself by stealing when she encounters something she can’t resist–books. With the help of her accordion-playing foster father, she learns to read and shares her stolen books with her neighbors during bombing raids as well as with the Jewish man hidden in her basement. <br><br>In superbly crafted writing that burns with intensity, award-winning author Markus Zusak, author of <i>I Am the Messenger,</i> has given us one of the most enduring stories of our time.<br><br><br><i>From the Hardcover edition.</i>",
+  :lg_img => "http://ecx.images-amazon.com/images/I/51eQvANUsnL.jpg",
+  :link => "http://www.amazon.com/The-Book-Thief-Markus-Zusak/dp/0375842209%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0375842209"
+  },
+  {
+  :title => "Not That Kind of Girl: A Young Woman Tells You What She's \"Learned\"",
+  :author => "Lena Dunham",
+  :description => "<b>For readers of Nora Ephron, Tina Fey, and David Sedaris, this hilarious, poignant, and extremely frank collection of personal essays confirms Lena Dunham—the acclaimed creator, producer, and star of HBO’s <i>Girls</i>—as one of the brightest and most original writers working today.</b><br>  <br> “If I could take what I’ve learned and make one menial job easier for you, or prevent you from having the kind of sex where you feel you must keep your sneakers on in case you want to run away during the act, then every misstep of mine was worthwhile. I’m already predicting my future shame at thinking I had anything to offer you, but also my future glory in having stopped you from trying an expensive juice cleanse or thinking that it was your fault when the person you are dating suddenly backs away, intimidated by the clarity of your personal mission here on earth. No, I am not a sexpert, a psychologist, or a dietician. I am not a mother of three or the owner of a successful hosiery franchise. But I am a girl with a keen interest in having it all, and what follows are hopeful dispatches from the frontlines of that struggle.”<br><br><b>Advance praise for <i>Not That Kind of Girl</i></b><br> <b> </b><br> “It’s not Lena Dunham’s candor that makes me gasp. Rather, it’s her writing—which is full of surprises where you least expect them. This is a fine, subversive book.”<b>—David Sedaris</b><br>  <br> “Always funny, sometimes wrenching, these essays are a testament to the creative wonder that is Lena Dunham.”<b>—Judy Blume</b><br>  <br> “Dunham’s writing is just as smart, honest, sophisticated, dangerous, and charming as her work on <i>Girls</i>. Its essential quality is a kind of joyful super-awareness: of herself, the world, the human. Reading her makes you glad to be in the world, and glad that she’s in it with you.”<b>—George Saunders</b><br>  <br> “Very few women have become famous for being who they actually are, nuanced and imperfect. When honesty happens, it’s usually couched in self-ridicule or self-help. Dunham doesn’t apologize like that—she simply tells her story as if it might be interesting. The result is shocking and radical because it is utterly familiar. <i>Not That Kind of Girl</i> is hilarious, artful, and staggeringly intimate; I read it shivering with recognition.”<b>—Miranda July</b>",
+  :lg_img => "http://ecx.images-amazon.com/images/I/51zQ3NxEmWL.jpg",
+  :link => "http://www.amazon.com/Not-That-Kind-Girl-Learned/dp/081299499X%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D081299499X"
+  },
+  {
+  :title => "Rooms: A Novel",
+  :author => "Lauren Oliver",
+  :description => "<p>The <em>New York Times</em> bestselling author of <em>Before I Fall</em> and the Delirium trilogy makes her brilliant adult debut with this mesmerizing story in the tradition of <em>The Lovely Bones, Her Fearful Symmetry,</em> and <em>The Ocean at the End of the Lane</em>—a tale of family, ghosts, secrets, and mystery, in which the lives of the living and the dead intersect in shocking, surprising, and moving ways.</p><p>Wealthy Richard Walker has just died, leaving behind his country house full of rooms packed with the detritus of a lifetime. His estranged family—bitter ex-wife Caroline, troubled teenage son Trenton, and unforgiving daughter Minna—have arrived for their inheritance.</p><p>But the Walkers are not alone. Prim Alice and the cynical Sandra, long dead former residents bound to the house, linger within its claustrophobic walls. Jostling for space, memory, and supremacy, they observe the family, trading barbs and reminiscences about their past lives. Though their voices cannot be heard, Alice and Sandra speak through the house itself—in the hiss of the radiator, a creak in the stairs, the dimming of a light bulb.</p><p>The living and dead are each haunted by painful truths that will soon surface with explosive force. When a new ghost appears, and Trenton begins to communicate with her, the spirit and human worlds collide—with cataclysmic results.</p><p>Elegantly constructed and brilliantly paced, <em>Rooms</em> is an enticing and imaginative ghost story and a searing family drama that is as haunting as it is resonant.</p>",
+  :lg_img => "http://ecx.images-amazon.com/images/I/51ZO5UABphL.jpg",
+  :link => "http://www.amazon.com/Rooms-A-Novel-Lauren-Oliver/dp/0062223194%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0062223194"
+  },
+  {
+  :title => "The Paying Guests",
+  :author => "Sarah Waters",
+  :description => "<div>  <b>From the bestselling author of <i>The Little Stranger </i>and <i>Fingersmith</i>, an enthralling novel about a widow and her daughter who take a young couple into their home in 1920s London.</b><br>  <br>   It is 1922, and London is tense. Ex-servicemen are disillusioned; the out-of-work and the hungry are demanding change. And in South London, in a genteel Camberwell villa\u0097a large, silent house now bereft of brothers, husband, and even servants\u0097life is about to be transformed as impoverished widow Mrs. Wray and her spinster daughter, Frances, are obliged to take in lodgers.<br>  <br>   With the arrival of Lilian and Leonard Barber, a modern young couple of the \u0093clerk class,” the routines of the house will be shaken up in unexpected ways. Little do the Wrays know just how profoundly their new tenants will alter the course of Frances’s life\u0097or, as passions mount and frustration gathers, how far-reaching, and how devastating, the disturbances will be.<br>  <br>   Short-listed for the Man Booker Prize three times, Sarah Waters has earned a reputation as one of our greatest writers of historical fiction, and here she has delivered again. A love story, a tension-filled crime story, and a beautifully atmospheric portrait of a fascinating time and place, <i>The Paying Guests</i> is Sarah Waters’s finest achievement yet.</div>",
+  :lg_img => "http://ecx.images-amazon.com/images/I/41ZJ2k1I31L.jpg",
+  :link => "http://www.amazon.com/The-Paying-Guests-Sarah-Waters/dp/1594633118%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1594633118"
+  },
+  {
+  :title => "The Glass Castle: A Memoir",
+  :author => "Jeannette Walls",
+  :description => "Jeannette Walls grew up with parents whose ideals and stubborn nonconformity were both their curse and their salvation. Rex and Rose Mary Walls had four children. In the beginning, they lived like nomads, moving among Southwest desert towns, camping in the mountains. Rex was a charismatic, brilliant man who, when sober, captured his children's imagination, teaching them physics, geology, and above all, how to embrace life fearlessly. Rose Mary, who painted and wrote and couldn't stand the responsibility of providing for her family, called herself an \"excitement addict.\" Cooking a meal that would be consumed in fifteen minutes had no appeal when she could make a painting that might last forever.  <P> Later, when the money ran out, or the romance of the wandering life faded, the Walls retreated to the dismal West Virginia mining town -- and the family -- Rex Walls had done everything he could to escape. He drank. He stole the grocery money and disappeared for days. As the dysfunction of the family escalated, Jeannette and her brother and sisters had to fend for themselves, supporting one another as they weathered their parents' betrayals and, finally, found the resources and will to leave home.  <P> What is so astonishing about Jeannette Walls is not just that she had the guts and tenacity and intelligence to get out, but that she describes her parents with such deep affection and generosity. Hers is a story of triumph against all odds, but also a tender, moving tale of unconditional love in a family that despite its profound flaws gave her the fiery determination to carve out a successful life on her own terms.  <P> For two decades, Jeannette Walls hid her roots. Now she tells her own story. A regular contributor to MSNBC.com, she lives in New York and Long Island and is married to the writer John Taylor.",
+  :lg_img => "http://ecx.images-amazon.com/images/I/41qFdmnyvxL.jpg",
+  :link => "http://www.amazon.com/The-Glass-Castle-A-Memoir/dp/074324754X%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D074324754X"
+  },
+  {
+  :title => "Wonder",
+  :author => "R. J. Palacio",
+  :description => "The extraordinary #1 <i>New York Times</i> bestseller that has captivated over 1 million readers.<br><br><i>I won't describe what I look like. Whatever you're thinking, it's probably worse. </i><br><br>August Pullman was born with a facial difference that, up until now, has prevented him from going to a mainstream school. Starting 5th grade at Beecher Prep, he wants nothing more than to be treated as an ordinary kid—but his new classmates can’t get past Auggie’s extraordinary face. <b>WONDER</b>, now a #1 <i>New York Times</i> bestseller and included on the Texas Bluebonnet Award master list, begins from Auggie’s point of view, but soon switches to include his classmates, his sister, her boyfriend, and others. These perspectives converge in a portrait of one community’s struggle with empathy, compassion, and acceptance. <br><br>\"Wonder is the best kids' book of the year,\" said Emily Bazelon, senior editor at Slate.com and author of <i>Sticks and Stones: Defeating the Culture of Bullying and Rediscovering the Power of Character and Empathy</i>. In a world where bullying among young people is an epidemic, this is a refreshing new narrative full of heart and hope. <b>R.J. Palacio</b> has called her debut novel “a meditation on kindness” —indeed, every reader will come away with a greater appreciation for the simple courage of friendship. Auggie is a hero to root for, a diamond in the rough who proves that <b><b>you can’t blend in when you were born to stand out.</b> </b><br><br>Join the conversation: <b>#thewonderofwonder</b>",
+  :lg_img => "http://ecx.images-amazon.com/images/I/41PQxDn1sxL.jpg",
+  :link => "http://www.amazon.com/Wonder-R-J-Palacio/dp/0375869026%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0375869026"
+  },
+  {
+  :title => "Where She Went",
+  :author => "Gayle Forman",
+  :description => "<div>  <b>The highly anticipated sequel to the <i>New York Times</i> bestselling and critically acclaimed <i>If I Stay</i></b><br>  <br>   Picking up several years after the dramatic conclusion of <i>If I Stay</i>, <i>Where She Went</i> continues the story of Adam and Mia, from Adam's point of view. Ever since Mia's decision to stay - but not with him - Adam's career has been on a wonderful trajectory. His album, borne from the anguish and pain of their breakup, has made him a bona fide star. And Mia herself has become a top-rate cellist, playing in some of the finest venues in the world. When their respective paths put them both in New York City at the same time, the result is a single night in which the two reunite - with wholly satisfying results.<br>  <br>   And don't miss Gayle's newest novel, JUST ONE DAY and the forthcoming companion, JUST ONE YEAR.</div>",
+  :lg_img => "http://ecx.images-amazon.com/images/I/51tnPV0jJ2L.jpg",
+  :link => "http://www.amazon.com/Where-She-Went-Gayle-Forman/dp/0142420891%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0142420891"
+  },
+  {
+  :title => "The Great Gatsby",
+  :author => "F. Scott Fitzgerald",
+  :description => "The Great Gatsby, F. Scott Fitzgerald’s third book, stands as the supreme achievement of his career. This exemplary novel of the Jazz Age has been acclaimed by generations of readers. The story of the fabulously wealthy Jay Gatsby and his love for the beautiful Daisy Buchanan, of lavish parties on Long Island at a time when The New York Times noted “gin was the national drink and sex the national obsession,” it is an exquisitely crafted tale of America in the 1920s.<BR><BR>The Great Gatsby is one of the great classics of twentieth-century literature.",
+  :lg_img => "http://ecx.images-amazon.com/images/I/51tmGgkv3iL.jpg",
+  :link => "http://www.amazon.com/The-Great-Gatsby-Scott-Fitzgerald/dp/0743273567%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0743273567"
+  },
+  {
+  :title => "Gone with the Wind, 75th Anniversary Edition",
+  :author => "Margaret Mitchell",
+  :description => "Since its original publication in 1936, <I >Gone With the Wind</I>—winner of the Pulitzer Prize and one of the bestselling novels of all time—has been heralded by readers everywhere as The Great American Novel.<BR><BR>Widely considered The Great American Novel, and often remembered for its epic film version, <I >Gone With the Wind</I> explores the depth of human passions with an intensity as bold as its setting in the red hills of Georgia. A superb piece of storytelling, it vividly depicts the drama of the Civil War and Reconstruction.<BR> <BR>This is the tale of Scarlett O’Hara, the spoiled, manipulative daughter of a wealthy plantation owner, who arrives at young womanhood just in time to see the Civil War forever change her way of life. A sweeping story of tangled passion and courage, in the pages of <I >Gone With the Wind</I>, Margaret Mitchell brings to life the unforgettable characters that have captured readers for over seventy years.",
+  :lg_img => "http://ecx.images-amazon.com/images/I/51OzjjUS28L.jpg",
+  :link => "http://www.amazon.com/Gone-Wind-75th-Anniversary-Edition/dp/1451635621%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1451635621"
+  },
+  {
+  :title => "The Hard Thing About Hard Things: Building a Business When There Are No Easy Answers",
+  :author => "Ben Horowitz",
+  :description => "<p>Ben Horowitz, cofounder of Andreessen Horowitz and one of Silicon Valley's most respected and experienced entrepreneurs, offers essential advice on building and running a startup—practical wisdom for managing the toughest problems business school doesn’t cover, based on his popular ben’s blog.</p><p>While many people talk about how great it is to start a business, very few are honest about how difficult it is to run one. Ben Horowitz analyzes the problems that confront leaders every day, sharing the insights he’s gained developing, managing, selling, buying, investing in, and supervising technology companies. A lifelong rap fanatic, he amplifies business lessons with lyrics from his favorite songs, telling it straight about everything from firing friends to poaching competitors, cultivating and sustaining a CEO mentality to knowing the right time to cash in.</p><p>Filled with his trademark humor and straight talk, <em>The Hard Thing About Hard Things</em> is invaluable for veteran entrepreneurs as well as those aspiring to their own new ventures, drawing from Horowitz's personal and often humbling experiences.</p>",
+  :lg_img => "http://ecx.images-amazon.com/images/I/41MGlhhZNIL.jpg",
+  :link => "http://www.amazon.com/The-Hard-Thing-About-Things/dp/0062273205%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0062273205"
+  },
+  {
+  :title => "The Wolf of Wall Street",
+  :author => "Jordan Belfort",
+  :description => "<b>Now a major motion picture directed by Martin Scorsese and starring Leonardo DiCaprio</b><br><br><b><i>NEW YORK TIMES </i>BESTSELLER</b><br> <br>By day he made thousands of dollars a minute. By night he spent it as fast as he  could, on drugs, sex, and international globe-trotting. From the binge that sank  a 170-foot motor yacht and ran up a $700,000 hotel tab,  to the wife and kids waiting at home, and the fast-talking, hard-partying  young stockbrokers who called him king and did his bidding, here, in his own inimitable  words, is the story of the ill-fated genius they called . . .<br><br><b>THE WOLF OF WALL STREET</b><br> <br>In the 1990s Jordan Belfort,  former kingpin of the notorious investment firm Stratton Oakmont, became one of the  most infamous names in American finance: a brilliant, conniving stock-chopper who  led his merry mob on a wild ride out of the canyons of Wall Street and into a massive  office on Long Island. Now, in this astounding and hilarious tell-all autobiography,  Belfort narrates a story of greed, power, and excess that no one could invent.<br><br> Reputedly  the prototype for the film <i>Boiler Room,</i> Stratton Oakmont turned microcap investing  into a wickedly lucrative game as Belfort’s hyped-up, coked-out brokers browbeat  clients into stock buys that were guaranteed to earn obscene profits—for the house.  But an insatiable appetite for debauchery, questionable tactics, and a fateful partnership  with a breakout shoe designer named Steve Madden would land Belfort on both sides  of the law and into a harrowing darkness all his own.<br> <br> From the stormy relationship  Belfort shared with his model-wife as they ran a madcap household that included two  young children, a full-time staff of twenty-two, a pair of bodyguards, and hidden  cameras everywhere—even as the SEC and FBI zeroed in on them—to the unbridled hedonism  of his office life, here is the extraordinary story of an ordinary guy who went from  hustling Italian ices at sixteen to making hundreds of millions. Until it all came  crashing down . . .<br><br><b>Praise for <i>The Wolf of Wall Street</i></b><br> <br>“Raw and frequently hilarious.”<b>—<i>The New York Times</i></b><br>  <br> “A rollicking tale of [Jordan Belfort’s] rise to riches as head of the infamous boiler room Stratton Oakmont . . . proof that there are indeed second acts in American lives.”<b>—<i>Forbes</i></b><br>  <br> “A cross between Tom Wolfe’s <i>The Bonfire of the Vanities </i>and Scorsese’s <i>GoodFellas </i>. . . Belfort has the Midas touch.”<b>—<i>The Sunday Times </i>(London)</b><br>  <br> “Entertaining as pulp fiction, real as a federal indictment . . . a hell of a read.”<b>—<i>Kirkus Reviews</i></b><br><br><br><i>From the Hardcover edition.</i>",
+  :lg_img => "http://ecx.images-amazon.com/images/I/51P%2B4-PCfNL.jpg",
+  :link => "http://www.amazon.com/Wolf-Wall-Street-Jordan-Belfort/dp/0553384775%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0553384775"
+  },
+  {
+  :title => "The Sun Also Rises",
+  :author => "Ernest Hemingway",
+  :description => "The quintessential novel of the Lost Generation, <em>The Sun Also Rises</em> is one of Ernest Hemingway's masterpieces and a classic example of his spare but powerful writing style. A poignant look at the disillusionment and angst of the post-World War I generation, the novel introduces two of Hemingway's most unforgettable characters: Jake Barnes and Lady Brett Ashley. The story follows the flamboyant Brett and the hapless Jake as they journey from the wild nightlife of 1920s Paris to the brutal bullfighting rings of Spain with a motley group of expatriates. It is an age of moral bankruptcy, spiritual dissolution, unrealized love, and vanishing illusions. First published in 1926, <em>The Sun Also Rises</em> helped to establish Hemingway as one of the greatest writers of the twentieth century.",
+  :lg_img => "http://ecx.images-amazon.com/images/I/51lmTfDL9fL.jpg",
+  :link => "http://www.amazon.com/The-Also-Rises-Ernest-Hemingway/dp/0743297334%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0743297334"
+  },
+  {
+  :title => "Blue Nights",
+  :author => "Joan Didion",
+  :description => "<p><b>A <i>New York Times</i> Notable Book</b></p><p>From one of our most powerful writers, a work of stunning frankness about losing a daughter.</p><p>Richly textured with memories from her own childhood and married life with her husband, John Gregory Dunne, and daughter, Quintana Roo, this new book by Joan Didion is an intensely personal and moving account of her thoughts, fears, and doubts regarding having children, illness and growing old.</p><p>As she reflects on her daughter’s life and on her role as a parent, Didion grapples with the candid questions that all parents face, and contemplates her age, something she finds hard to acknowledge, much less accept. <i>Blue Nights</i>—the long, light evening hours that signal the summer solstice, “the opposite of the dying of the brightness, but also its warning”—like <i>The Year of Magical Thinking</i> before it, is an iconic book of incisive and electric honesty, haunting and profound.</p>",
+  :lg_img => "http://ecx.images-amazon.com/images/I/51-KQBuh10L.jpg",
+  :link => "http://www.amazon.com/Blue-Nights-Joan-Didion/dp/0307387380%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0307387380"
+  },
+  {
+  :title => "Me Talk Pretty One Day",
+  :author => "David Sedaris",
+  :description => "A recent transplant to Paris, humorist David Sedaris, bestselling author of \"Naked\", presents a collection of his strongest work yet, including the title story about his hilarious attempt to learn French. A number one national bestseller now in paperback.",
+  :lg_img => "http://ecx.images-amazon.com/images/I/41ge7%2BYdIYL.jpg",
+  :link => "http://www.amazon.com/Me-Talk-Pretty-One-Day/dp/0316776963%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0316776963"
+  },
+  {
+  :title => "Frog Music: A Novel",
+  :author => "Emma Donoghue",
+  :description => "<strong>From the author of the worldwide bestseller <em>Room</em>: \"Her greatest achievement yet...Emma Donoghue shows more than range with FROG MUSIC--she shows genius.\" -- Darin Strauss, author of <em>Half a Life</em></strong><br><br>Summer of 1876: San Francisco is in the fierce grip of a record-breaking heat wave and a smallpox epidemic. Through the window of a railroad saloon, a young woman named Jenny Bonnet is shot dead. <br><br>The survivor, her friend Blanche Beunon, is a French burlesque dancer. Over the next three days, she will risk everything to bring Jenny's murderer to justice--if he doesn't track her down first. The story Blanche struggles to piece together is one of free-love bohemians, desperate paupers, and arrogant millionaires; of jealous men, icy women, and damaged children. It's the secret life of Jenny herself, a notorious character who breaks the law every morning by getting dressed: a charmer as slippery as the frogs she hunts.<br><br>In thrilling, cinematic style, FROG MUSIC digs up a long-forgotten, never-solved crime. Full of songs that migrated across the world, Emma Donoghue's lyrical tale of love and bloodshed among lowlifes captures the pulse of a boomtown like no other.",
+  :lg_img => "http://ecx.images-amazon.com/images/I/41hgt3yPRLL.jpg",
+  :link => "http://www.amazon.com/Frog-Music-Novel-Emma-Donoghue/dp/031632468X%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D031632468X"
+  },
+  {
+  :title => "An Unnecessary Woman",
+  :author => "Rabih Alameddine",
+  :description => "<div><B>One of the Middle East’s most celebrated voices, Rabih Alameddine follows his international bestseller, The Hakawati, with an enchanting story of a book-loving, obsessive, seventy-two-year-old \u0093unnecessary” woman.</B><br><BR>Aaliya Saleh lives alone in her Beirut apartment, surrounded by stockpiles of books. Godless, fatherless, childless, and divorced, Aaliya is her family’s \u0093unnecessary appendage.” Every year, she translates a new favorite book into Arabic, then stows it away. The thirty-seven books that Aaliya has translated over her lifetime have never been read\u0097by anyone.<br><BR>In this breathtaking portrait of a reclusive woman’s late-life crisis, readers follow Aaliya’s digressive mind as it ricochets across visions of past and present Beirut. Colorful musings on literature, philosophy, and art are invaded by memories of the Lebanese Civil War and Aaliya’s own volatile past. As she tries to overcome her aging body and spontaneous emotional upwellings, Aaliya is faced with an unthinkable disaster that threatens to shatter the little life she has left.<br><BR>A love letter to literature and its power to define who we are, the prodigiously gifted Rabih Alameddine has given us a nuanced rendering of one woman's life in the Middle East.<BR></DIV>",
+  :lg_img => "http://ecx.images-amazon.com/images/I/41-f9Cdve3L.jpg",
+  :link => "http://www.amazon.com/An-Unnecessary-Woman-Rabih-Alameddine/dp/0802122140%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0802122140"
+  },
+  {
+  :title => "The Divorce Papers: A Novel",
+  :author => "Susan Rieger",
+  :description => "<b>Sparkling and sophisticated, this sometimes hilarious, sometimes heartbreaking debut novel tells the story of a very messy, very high-profile divorce and the endearingly cynical young lawyer dragooned into handling it.</b><br>  <br> Twenty-nine-year-old Sophie Diehl is happy toiling away as a criminal law associate at an old-line New England firm, where she very much appreciates that most of her clients are trapped behind bars. Everyone at Traynor, Hand knows she abhors face-to-face contact, but one week, with all the big partners out of town, Sophie is stuck handling the intake interview for the daughter of the firm’s most important client.<br>  <br> After eighteen years of marriage, <i>Mayflower</i> descendant Mia Meiklejohn Durkheim has just been served divorce papers in a humiliating scene at the popular local restaurant, Golightly’s. Mia is now locked and loaded to fight her eminent and ambitious husband, Dr. Daniel Durkheim, Chief of the Department of Pediatric Oncology at Mather Medical School, for custody of their ten-year-old daughter Jane. Mia also burns to take him down a peg. Sophie warns Mia that she’s never handled a divorce case before, but Mia can’t be put off. The way she sees it, it’s her first divorce, too. For Sophie, the whole affair will spark a hard look at her own relationships—with her parents, colleagues, friends, lovers, and, most important, herself.<br>  <br> A rich, layered novel told entirely through personal correspondence, office memos, e-mails, articles, handwritten notes, and legal documents, <i>The Divorce Papers</i> offers a direct window into the lives of an entertaining cast of characters never shy about speaking their minds. Original and captivating, Susan Rieger’s brilliantly conceived and expertly crafted debut races along with wit, heartache, and exceptional comedic timing, as it explores the complicated family dynamic that results when marriage fails—as well as the ever-present risks and coveted rewards of that thing called love.",
+  :lg_img => "http://ecx.images-amazon.com/images/I/51eaydnkepL.jpg",
+  :link => "http://www.amazon.com/The-Divorce-Papers-A-Novel/dp/0804137447%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0804137447"
+  },
+  {
+  :title => "The Year of Magical Thinking",
+  :author => "Joan Didion",
+  :description => "From one of America’s iconic writers, a stunning book of electric honesty and passion. Joan Didion explores an intensely personal yet universal experience: a portrait of a marriage--and a life, in good times and bad--that will speak to anyone who has ever loved a husband or wife or child.",
+  :lg_img => "http://ecx.images-amazon.com/images/I/41fAdMQS9eL.jpg",
+  :link => "http://www.amazon.com/Year-Magical-Thinking-Joan-Didion/dp/1400078431%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1400078431"
+  },
+  {
+  :title => "All the Light We Cannot See: A Novel",
+  :author => "Anthony Doerr",
+  :description => "From the highly acclaimed, multiple award-winning Anthony Doerr, the beautiful, stunningly ambitious instant <i>New York Times</i> bestseller about a blind French girl and a German boy whose paths collide in occupied France as both try to survive the devastation of World War II.<BR><BR>Marie-Laure lives with her father in Paris near the Museum of Natural History, where he works as the master of its thousands of locks. When she is six, Marie-Laure goes blind and her father builds a perfect miniature of their neighborhood so she can memorize it by touch and navigate her way home. When she is twelve, the Nazis occupy Paris and father and daughter flee to the walled citadel of Saint-Malo, where Marie-Laure’s reclusive great-uncle lives in a tall house by the sea. With them they carry what might be the museum’s most valuable and dangerous jewel.<BR> <BR>In a mining town in Germany, the orphan Werner grows up with his younger sister, enchanted by a crude radio they find. Werner becomes an expert at building and fixing these crucial new instruments, a talent that wins him a place at a brutal academy for Hitler Youth, then a special assignment to track the resistance. More and more aware of the human cost of his intelligence, Werner travels through the heart of the war and, finally, into Saint-Malo, where his story and Marie-Laure’s converge.<BR> <BR>Doerr’s “stunning sense of physical detail and gorgeous metaphors” (<I>San Francisco Chronicle</I>) are dazzling. Deftly interweaving the lives of Marie-Laure and Werner, he illuminates the ways, against all odds, people try to be good to one another. Ten years in the writing, <I>All the Light We Cannot See</I> is a magnificent, deeply moving novel from a writer “whose sentences never fail to thrill” (<I>Los Angeles Times</I>).",
+  :lg_img => "http://ecx.images-amazon.com/images/I/51wu21FD%2BpL.jpg",
+  :link => "http://www.amazon.com/All-Light-We-Cannot-See/dp/1476746583%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1476746583"
+  },
+  {
+  :title => "The Organized Mind: Thinking Straight in the Age of Information Overload",
+  :author => "Daniel J. Levitin",
+  :description => "<div><b><i>New York Times</i> bestselling author and neuroscientist Daniel J. Levitin shifts his keen insights from your brain on music to your brain in a sea of details.</b><br><br> The information age is drowning us with an unprecedented deluge of data. At the same time, we’re expected to make more\u0097and faster\u0097decisions about our lives than ever before. No wonder, then, that the average American reports frequently losing car keys or reading glasses, missing appointments, and feeling worn out by the effort required just to keep up.<br><br> But somehow some people become quite accomplished at managing information flow. In <i>The Organized Mind</i>, Daniel J. Levitin, PhD, uses the latest brain science to demonstrate how those people excel\u0097and how readers can use their methods to regain a sense of mastery over the way they organize their homes, workplaces, and time.<br><br> With lively, entertaining chapters on everything from the kitchen junk drawer to health care to executive office workflow, Levitin reveals how new research into the cognitive neuroscience of attention and memory can be applied to the challenges of our daily lives. <i>This Is Your Brain on Music</i> showed how to better play and appreciate music through an understanding of how the brain works. <i>The Organized Mind</i> shows how to navigate the churning flood of information in the twenty-first century with the same neuroscientific perspective.</div>",
+  :lg_img => "http://ecx.images-amazon.com/images/I/41fd-uSM0QL.jpg",
+  :link => "http://www.amazon.com/The-Organized-Mind-Thinking-Information/dp/052595418X%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D052595418X"
+  },
+  {
+  :title => "We Are Not Ourselves: A Novel",
+  :author => "Matthew Thomas",
+  :description => "Destined to be a classic, this “powerfully moving” (Chad Harbach, <I>The Art of Fielding)</I>, multigenerational debut novel of an Irish-American family is nothing short of a “masterwork” (Joshua Ferris, <I>Then We Came to the End</I>).<BR><BR>Born in 1941, Eileen Tumulty is raised by her Irish immigrant parents in Woodside, Queens, in an apartment where the mood swings between heartbreak and hilarity, depending on whether guests are over and how much alcohol has been consumed.<BR> <BR>When Eileen meets Ed Leary, a scientist whose bearing is nothing like those of the men she grew up with, she thinks she’s found the perfect partner to deliver her to the cosmopolitan world she longs to inhabit. They marry, and Eileen quickly discovers Ed doesn’t aspire to the same, ever bigger, stakes in the American Dream.<BR> <BR>Eileen encourages her husband to want more: a better job, better friends, a better house, but as years pass it becomes clear that his growing reluctance is part of a deeper psychological shift. An inescapable darkness enters their lives, and Eileen and Ed and their son Connell try desperately to hold together a semblance of the reality they have known, and to preserve, against long odds, an idea they have cherished of the future.<BR> <BR>Through the Learys, novelist Matthew Thomas charts the story of the American Century, particularly the promise of domestic bliss and economic prosperity that captured hearts and minds after WWII. The result is a riveting and affecting work of art; one that reminds us that life is more than a tally of victories and defeats, that we live to love and be loved, and that we should tell each other so before the moment slips away. <BR> <BR>Epic in scope, heroic in character, masterful in prose, <I>We Are Not Ourselves </I>heralds the arrival of a major new talent in contemporary fiction.",
+  :lg_img => "http://ecx.images-amazon.com/images/I/51VGhYFmu3L.jpg",
+  :link => "http://www.amazon.com/We-Are-Not-Ourselves-Novel/dp/147675666X%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D147675666X"
+  },
+  {
+  :title => "The Lean Startup: How Today's Entrepreneurs Use Continuous Innovation to Create Radically Successful Businesses",
+  :author => "Eric Ries",
+  :description => "<p><b>Most startups fail. But many of those failures are preventable.  The Lean Startup is a new approach being adopted across the globe, changing the way companies are built and new products are launched. <br></b><br>Eric Ries defines a startup as <b>an organization dedicated to creating something new under conditions of extreme uncertainty</b>. This is just as true for one person in a garage or a group of seasoned professionals in a Fortune 500 boardroom. What they have in common is a mission to penetrate that fog of uncertainty to discover a successful path to a sustainable business. <br><br>The Lean Startup approach fosters companies that are both more capital efficient and that leverage human creativity more effectively.  Inspired by lessons from lean manufacturing, it relies on “validated learning,” rapid scientific experimentation, as well as a number of counter-intuitive practices that shorten product development cycles, measure actual progress without resorting to vanity metrics, and learn what customers really want. It enables a company to shift directions with agility, altering plans inch by inch, minute by minute. <br><br>Rather than wasting time creating elaborate business plans, <i>The Lean Startup</i> offers entrepreneurs - in companies of all sizes - a way to test their vision continuously, to adapt and adjust before it’s too late. Ries provides a scientific approach to creating and managing successful startups in a age when companies need to innovate more than ever.</p>",
+  :lg_img => "http://ecx.images-amazon.com/images/I/51vN15YCJyL.jpg",
+  :link => "http://www.amazon.com/The-Lean-Startup-Entrepreneurs-Continuous/dp/0307887898%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0307887898"
+  },
+  {
+  :title => "The Long Way Home",
+  :author => "Karen McQuestion",
+  :description => "Four women bound by chance take the trip of a lifetime in Karen  McQuestion's fifth novel The Long Way Home.  <p>For Wisconsinites Marnie, Laverne and Rita, life isn't working out so  well. Each is biding time, waiting for something better, something to  transport them out of what their lives have recently become. And then  there's Jazzy: bubbly, positive, and happy even though she hears voices of  the departed. Brought together by a chance meeting, the women decide to  join Marnie on a road trip from Wisconsin to Las Vegas where she intends  to reunite with Troy, the boy she raised as her own—and who she’s been  separated from since her boyfriend’s death. Little do they know that as  the road trip unfolds, so will their lives—in directions they never  anticipated. Humorous, heartwarming, and bittersweet, the journey has  something special in store for each woman.",
+  :lg_img => "http://ecx.images-amazon.com/images/I/51AvVWAYqnL.jpg",
+  :link => "http://www.amazon.com/The-Long-Home-Karen-McQuestion/dp/1612183565%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1612183565"
+  },
+  {
+  :title => "Toms River: A Story of Science and Salvation",
+  :author => "Dan Fagin",
+  :description => "<b><b>WINNER OF THE PULITZER PRIZE • <b>Winner of The New York Public Library’s Helen Bernstein Book Award • “A new classic of science reporting.”—<i>The New York Times</i></b></b></b><i><b><br></b></i><br>The riveting true story of a small town ravaged by industrial pollution, <i>Toms River</i> melds hard-hitting investigative reporting, a fascinating scientific detective story, and an unforgettable cast of characters into a sweeping narrative in the tradition of <i>A Civil Action, The Emperor of All Maladies, </i>and <i>The Immortal Life of Henrietta Lacks</i>.<br><br>One of New Jersey’s seemingly innumerable quiet seaside towns, Toms River became the unlikely setting for a decades-long drama that culminated in 2001 with one of the largest legal settlements in the annals of toxic dumping. A town that would rather have been known for its Little League World Series champions ended up making history for an entirely different reason: a notorious cluster of childhood cancers scientifically linked to local air and water pollution. For years, large chemical companies had been using Toms River as their private dumping ground, burying tens of thousands of leaky drums in open pits and discharging billions of gallons of acid-laced wastewater into the town’s namesake river.<br><br>In an astonishing feat of investigative reporting, prize-winning journalist Dan Fagin recounts the sixty-year saga of rampant pollution and inadequate oversight that made Toms River a cautionary example for fast-growing industrial towns from South Jersey to South China. He tells the stories of the pioneering scientists and physicians who first identified pollutants as a cause of cancer, and brings to life the everyday heroes in Toms River who struggled for justice: a young boy whose cherubic smile belied the fast-growing tumors that had decimated his body from birth; a nurse who fought to bring the alarming incidence of childhood cancers to the attention of authorities who didn’t want to listen; and a mother whose love for her stricken child transformed her into a tenacious advocate for change.<br><br>A gripping human drama rooted in a centuries-old scientific quest, <i>Toms River</i> is a tale of dumpers at midnight and deceptions in broad daylight, of corporate avarice and government neglect, and of a few brave individuals who refused to keep silent until the truth was exposed.<br><br><b><b>NAMED ONE OF THE BEST BOOKS OF THE YEAR BY NPR AND <i>KIRKUS REVIEWS</i></b><br><br></b>“A thrilling journey full of twists and turns, <i>Toms River</i> is essential reading for our times. Dan Fagin handles topics of great complexity with the dexterity of a scholar, the honesty of a journalist, and the dramatic skill of a novelist.”<b>—Siddhartha Mukherjee, M.D., author of the Pulitzer Prize–winning <i>The Emperor of All Maladies</i></b><br> <b> </b><br>“A complex tale of powerful industry, local politics, water rights, epidemiology, public health and cancer in a gripping, page-turning environmental thriller.”<b>—NPR</b><br><br>“Unstoppable reading.”<b>—<i>The Philadelphia Inquirer</i></b><br>  <br> “Meticulously researched and compellingly recounted . . . It’s every bit as important—and as well-written—as <i>A Civil Action</i> and <i>The Immortal Life of Henrietta Lacks</i>.”<b>—<i>The Star-Ledger</i></b><br>  <br> “Fascinating . . . a gripping environmental thriller.”<b>—<i>Kirkus Reviews</i> (starred review)</b><br>  <br> “An honest, thoroughly researched, intelligently written book.”<b>—<i>Slate</i></b><br>  <br> “[A] hard-hitting account . . . a triumph.”<b>—<i>Nature</i></b><br> <i> </i><br> “Absorbing and thoughtful.”<b>—<i>USA Today</i></b>",
+  :lg_img => "http://ecx.images-amazon.com/images/I/515LXW1kAOL.jpg",
+  :link => "http://www.amazon.com/Toms-River-Story-Science-Salvation/dp/055380653X%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D055380653X"
+  },
+  {
+  :title => "Paper Towns",
+  :author => "John Green",
+  :description => "<div>  <b>From the #1 bestselling author of <i>The Fault in Our Stars</i></b><br>  <br>   Winner of the Edgar Award for Best Young Adult Mystery<br>   <i>New York Times </i>bestseller<br>   <i>USA Today </i>bestseller<br>   <i>Publishers Weekly </i>bestseller<br>    </div> When Margo Roth Spiegelman beckons Quentin Jacobsen in the middle of the night\u0097dressed like a ninja and plotting an ingenious campaign of revenge\u0097he follows her. Margo’s always planned extravagantly, and, until now, she’s always planned solo. After a lifetime of loving Margo from afar, things are finally looking up for Q . . . until day breaks and she has vanished. Always an enigma, Margo has now become a mystery. But there are clues. And they’re for Q.<br><br> Printz Medalist John Green returns with the trademark brilliant wit and heart-stopping emotional honesty that have inspired a new generation of readers.",
+  :lg_img => "http://ecx.images-amazon.com/images/I/51hgkNew%2BXL.jpg",
+  :link => "http://www.amazon.com/Paper-Towns-John-Green/dp/014241493X%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D014241493X"
+  },
+  {
+  :title => "I Am Malala: The Girl Who Stood Up for Education and Was Shot by the Taliban",
+  :author => "Malala Yousafzai",
+  :description => "When the Taliban took control of the Swat Valley in Pakistan, one girl spoke out. Malala Yousafzai refused to be silenced and fought for her right to an education.<br><br>On Tuesday, October 9, 2012, when she was fifteen, she almost paid the ultimate price. She was shot in the head at point-blank range while riding the bus home from school, and few expected her to survive. <br><br>Instead, Malala's miraculous recovery has taken her on an extraordinary journey from a remote valley in northern Pakistan to the halls of the United Nations in New York. At sixteen, she has become a global symbol of peaceful protest and the youngest nominee ever for the Nobel Peace Prize.<br><br>I AM MALALA<em> </em>is the remarkable tale of a family uprooted by global terrorism, of the fight for girls' education, of a father who, himself a school owner, championed and encouraged his daughter to write and attend school, and of brave parents who have a fierce love for their daughter in a society that prizes sons.<br><br>I AM MALALA<em> </em>will make you believe in the power of one person's voice to inspire change in the world.",
+  :lg_img => "http://ecx.images-amazon.com/images/I/51nSmkd6tIL.jpg",
+  :link => "http://www.amazon.com/Am-Malala-Stood-Education-Taliban/dp/0316322407%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0316322407"
+  },
+  {
+  :title => "A Long Way Down",
+  :author => "Nick Hornby",
+  :description => "<div> <p>     <i>New York Times</i>-bestselling author Nick Hornby mines the hearts and psyches of four lost souls who connect just when they've reached the end of the line. <i>A Long Way Down</i> is now a major motion picture from Magnolia Pictures starring Pierce Brosnan, Toni Collette, Aaron Paul, and Imogen Poots.<br>    <br>     Meet Martin, JJ, Jess, and Maureen. Four people who come together on New Year's Eve: a former TV talk show host, a musician, a teenage girl, and a mother. Three are British, one is American. They encounter one another on the roof of Topper's House, a London destination famous as the last stop for those ready to end their lives.<br>    <br>     In four distinct and riveting first-person voices, Nick Hornby tells a story of four individuals confronting the limits of choice, circumstance, and their own mortality. This is a tale of connections made and missed, punishing regrets, and the grace of second chances.<br>    <br>     Intense, hilarious, provocative, and moving, <i>A Long Way Down</i> is a novel about suicide that is, surprisingly, full of life.</p></div>",
+  :lg_img => "http://ecx.images-amazon.com/images/I/51A8DD7E6YL.jpg",
+  :link => "http://www.amazon.com/Long-Way-Down-Nick-Hornby/dp/1594481938%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D1594481938"
+  },
+  {
+  :title => "This Is Where I Leave You: A Novel",
+  :author => "Jonathan Tropper",
+  :description => "<div>  <b>Soon to be a major motion picture starring Jason Bateman, Tina Fey Jane Fonda, and Adam Driver</b><br>  <br>   <b>\"Often sidesplitting, mostly heartbreaking...[Tropper is] a more sincere, insightful version of Nick Hornby, that other master of male psyche.\" --<i>USA Today</i> </b><br>  <br>   The death of Judd Foxman's father marks the first time that the entire Foxman clan has congregated in years. There is, however, one conspicuous absence: Judd's wife, Jen, whose affair with his radio- shock-jock boss has recently become painfully public. Simultaneously mourning the demise of his father and his marriage, Judd joins his dysfunctional family as they reluctantly sit shiva-and spend seven days and nights under the same roof. The week quickly spins out of control as longstanding grudges resurface, secrets are revealed and old passions are reawakened. Then Jen delivers the clincher: she's pregnant.<br>  <br>   <i>This Is Where I Leave You</i> is Jonathan Tropper's (<i>One Last Thing Before I Go) </i>most accomplished work to date, and a riotously funny, emotionally raw novel about love, marriage, divorce, family, and the ties that bind-whether we like it or not.</div>",
+  :lg_img => "http://ecx.images-amazon.com/images/I/51qCoROF3ZL.jpg",
+  :link => "http://www.amazon.com/This-Is-Where-Leave-You/dp/0452296366%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0452296366"
+  },
+  {
+  :title => "Secret Place",
+  :author => "FIFE DALE",
+  :description => "You hunger to live in the presence of God, and you yearn to know the Father's heart in an intimate way. You desire revelation and passionate encounters with the Almighty, and you long to spend time in The Secret Place, getting to know the Father in a deeper way. This book will lead you into that place of revelation, the place that will satisfy your hunger for more of God. If you long to experience a greater intimacy with the Father, The Secret Place will draw you in and change your life!",
+  :lg_img => "http://ecx.images-amazon.com/images/I/41ZAdQOkS8L.jpg",
+  :link => "http://www.amazon.com/Secret-Place-FIFE-DALE/dp/0883687151%3FSubscriptionId%3DAKIAIMMPVGGEOFIPQZ6Q%26tag%3Dbooclu080-20%26linkCode%3Dxm2%26camp%3D2025%26creative%3D165953%26creativeASIN%3D0883687151"
+  }])
 
