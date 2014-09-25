@@ -1,85 +1,86 @@
 <%= render "nav" %>
 <%= render "header"  %>
 
-  <div class="panel-body">
+<div class="panel-body">
+   <!-- previous button -->
+  <% if @book.id != 1 %>
+    <a href="/books/<%= @book.id - 1%>" class="prev">Previous</a>
+  <% end %>
+  <!-- next button -->
+  <% if @book.id != @books %>
+    <a href="/books/<%= @book.id + 1%>" class="next">Next</a>
+  <% end %>
 
 
-    <% if @book.id != @books %>
-      <a href="/books/<%= @book.id + 1%>">Next</a>
-    <% end %>
+  <div class="row">
+    <div class="row-center">
 
-    <% if @book.id != 1 %>
-      <a href="/books/<%= @book.id - 1%>">Previous</a>
-    <% end %>
-
-
-    <div class="row">
-      <div class="row-center">
-      <div class="col-xs-4">
+      <!-- book image -->
+      <div class="col-xs-4 col-xs-offset-1">
         <a href="<%= @book.link %>" target="_blank"><img src="<%= @book.lg_img  %>"></a>
       </div>
-      <div class="col-xs-4">
-        <h3><%= @book.title %></h3>
-        <h4><%= @book.author %></h4>
-        <p><strong>Description:</strong></p>
-        <p><%=raw @book.description  %></p>
-      </div>
 
-      <div class="col-xs-3 col-xs-offset-1">
-        <% if @current_user %>
+      <!-- description -->
+      <div class="col-xs-6">
+        <div class="book-description">
+          <h3><%= @book.title %></h3>
+          <h4><%= @book.author %></h4>
+          <p><strong>Description:</strong></p>
+          <p><%=raw @book.description  %></p>
+        </div>
+        <div class="buttons">
+          <% if @current_user %>
+              <% if !@this_book %>
+                <p style="color: #474A7F" id="book-status"></p>
+                <!-- button to add to read -->
+                <form action="/books/<%= @book.id %>/favorites" method="post" class="read-it">
+                <%= token_tag form_authenticity_token %>
+                  <input type="hidden" name="favorite[status]" class="read-val" value="read">
+                  <div class="form-group">
+                    <input type="submit" value="I've Read It!" class="form-control btn btn-default" id="read-button">
+                  </div>
+                </form>
 
-            <% if !@this_book %>
-              <p id="book-status" style="color:blue"></p>
+                <!-- button to add to queue -->
+                <form action="/books/<%= @book.id %>/favorites" method="post" class="queue-it">
+                <%= token_tag form_authenticity_token %>
+                  <input type="hidden" name="favorite[status]" class="queue-val" value="queue">
+                  <div class="form-group">
+                    <input type="submit" value="Add to Queue" class="form-control btn btn-warning" id="queue-button">
+                  </div>
+                </form>
 
-              <!-- button to add to read -->
-              <form action="/books/<%= @book.id %>/favorites" method="post" class="read-it">
-              <%= token_tag form_authenticity_token %>
-                <input type="hidden" name="favorite[status]" class="read-val" value="read">
+              <!-- if already added to list -->
+              <% else %>
+                <p>This book is already on your list!</p>
                 <div class="form-group">
-                  <input type="submit" value="I've Read It!" class="form-control btn btn-default">
+                  <button class="form-control btn btn-default disabled">I've Read It!</button>
                 </div>
-              </form>
-
-              <!-- button to add to queue -->
-              <form action="/books/<%= @book.id %>/favorites" method="post" class="queue-it">
-              <%= token_tag form_authenticity_token %>
-                <input type="hidden" name="favorite[status]" class="queue-val" value="queue">
                 <div class="form-group">
-                  <input type="submit" value="Add to Queue" class="form-control btn btn-warning" >
+                  <button class="form-control btn btn-warning disabled">Add to Queue</button>
                 </div>
-              </form>
-            <!-- if already added to list -->
-            <% else %>
-              <p>This book is already on your list!</p>
+              <% end %>
+
+          <!-- if not logged in-->
+          <% else %>
+            <p>Signup to create a reading list!</p>
               <div class="form-group">
                 <button class="form-control btn btn-default disabled">I've Read It!</button>
               </div>
               <div class="form-group">
                 <button class="form-control btn btn-warning disabled">Add to Queue</button>
               </div>
-            <% end %>
-
-        <!-- if not logged in-->
-        <% else %>
-          <p>Signup to create a reading list!</p>
-            <div class="form-group">
-              <button class="form-control btn btn-default disabled">I've Read It!</button>
-            </div>
-            <div class="form-group">
-              <button class="form-control btn btn-warning disabled">Add to Queue</button>
-            </div>
-
-        <% end %>
-      </div>
+          <% end %>
+        </div>
       </div>
     </div>
+  </div>
+
 
     <div class="row">
-      <div class="col-xs-12" id="convo-hed">
-        <div class="col-xs-3 col-xs-offset-1" id="discussion-text">
+      <div class="col-xs-11 col-xs-offset-1" id="convo-hed">
         <h3>Spoilers below!</h3>
         <a href="javascript:void(0);" id="spoilers"><h5>Read the book? Join the discussion!</h5></a>
-      </div>
       </div>
     </div>
 
@@ -109,7 +110,9 @@
 
           <% @book.comments.each do |comment| %>
             <div class="indiv-comment">
-              <a href="javascript:void(0);" class="comment-link"><%= comment.title %></a>
+              <p><strong><%= comment.title %></strong>
+              <br>
+              <span class="comment-toggle"><a href="javascript:void(0);">See full discussion</a></span></p>
               <p class="comment-body"><%= comment.body %></p>
             </div>
           <% end %>
@@ -120,4 +123,5 @@
         </div>
       </div>
     </div>
+  </div>
 

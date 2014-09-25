@@ -138,7 +138,7 @@ $(document).ready(function() {
           console.log(data);
 
           //append comments to page
-          $(".comment-title").append(data.title);
+          $(".comment-link").append(data.title);
           $(".comment-body").append(data.body);
 
           //reset form values
@@ -156,17 +156,19 @@ $(document).ready(function() {
   });
 
   $("#discussions").hide();
-
   $(".comment-body").hide();
 
-  $(".comment-link").on("click", function(e) {
-    e.preventDefault();
-    $(".comment-body").show();
+  $(".comment-toggle").each(function(index, value) {
+    $(value).click(function() {
+      console.log(value);
+       $(".comment-body").toggle();
+
+    });
   });
 
   $("#spoilers").on("click", function(e) {
     e.preventDefault();
-     $("#discussions").show();
+     $("#discussions").toggle();
   });
 
 
