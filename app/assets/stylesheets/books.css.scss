@@ -9,13 +9,30 @@
   background-color: #DBDDFF;
   text-align: center;
   /*font-family: 'Playfair Display', serif;*/
-  font-family: 'Lato', sans-serif;
+  /*font-family: 'Lato', sans-serif;*/
+  font-family: 'Quicksand', sans-serif;
   margin: 0;
 }
 
 .header h1 {
   font-size: 65px;
   padding-top: 20px;
+}
+
+.next {
+  font-family: 'Quicksand', sans-serif;
+  position: absolute;
+  right: 20px;
+}
+
+.prev {
+  font-family: 'Quicksand', sans-serif;
+  position: absolute;
+  left: 20px;
+}
+
+.navbar {
+  font-family: 'Quicksand', sans-serif;
 }
 
 
@@ -31,24 +48,48 @@
 /* buttons */
 #read-button {
   width: 150px;
+  font-family: 'Quicksand', sans-serif;
 }
 
 #queue-button {
   width: 150px;
+  font-family: 'Quicksand', sans-serif;
 }
 
+#book-status {
+  color: #474A7F;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: bold;
+
+}
+
+.info-text {
+  color: #474A7F;
+  font-family: 'Quicksand', sans-serif;
+
+}
+.book-description {
+  font-family: 'Jacques Francois', serif;
+}
+
+.book-description h3 {
+  font-family: 'Quicksand', sans-serif;
+}
 /* discussions section */
 
 #convo-hed {
   margin-top: 50px;
   color: #373740;
+  font-family: 'Quicksand', sans-serif;
 }
 
 #convo-hed a {
   color: #373740;
+  font-family: 'Jacques Francois', serif;
 }
 
 .form-group {
+  font-family: 'Quicksand', sans-serif;
   color: white;
   margin-top: 30px;
 }
@@ -56,6 +97,7 @@
 #discussions {
   height: 700px;
   background-color: #8C8DA3;
+  font-family: 'Jacques Francois', serif;
 }
 
 .indiv-comment {
@@ -67,9 +109,14 @@
 
 
 .all-comments h4 {
+  font-family: 'Quicksand', sans-serif;
   margin-bottom: 15px;
   padding-bottom: 10px;
   border-bottom: 1px solid #373740;
+}
+
+span {
+  font-family: 'Quicksand', sans-serif;
 }
 
 .all-comments {

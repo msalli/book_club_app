@@ -2,15 +2,16 @@
 <%= render "header"  %>
 
 <div class="panel-body">
-   <!-- previous button -->
-  <% if @book.id != 1 %>
-    <a href="/books/<%= @book.id - 1%>" class="prev">Previous</a>
-  <% end %>
-  <!-- next button -->
-  <% if @book.id != @books %>
-    <a href="/books/<%= @book.id + 1%>" class="next">Next</a>
-  <% end %>
-
+  <div class="row">
+    <!-- previous button -->
+    <% if @book.id != 1 %>
+      <a href="/books/<%= @book.id - 1%>" class="prev">Previous</a>
+    <% end %>
+    <!-- next button -->
+    <% if @book.id != @books %>
+      <a href="/books/<%= @book.id + 1%>" class="next">Next</a>
+    <% end %>
+  </div>
 
   <div class="row">
     <div class="row-center">
@@ -31,7 +32,7 @@
         <div class="buttons">
           <% if @current_user %>
               <% if !@this_book %>
-                <p style="color: #474A7F" id="book-status"></p>
+                <p id="book-status"></p>
                 <!-- button to add to read -->
                 <form action="/books/<%= @book.id %>/favorites" method="post" class="read-it">
                 <%= token_tag form_authenticity_token %>
@@ -52,7 +53,7 @@
 
               <!-- if already added to list -->
               <% else %>
-                <p>This book is already on your list!</p>
+                <p class="info-text"><strong>This book is already on your list!</strong></p>
                 <div class="form-group">
                   <button class="form-control btn btn-default disabled">I've Read It!</button>
                 </div>
@@ -63,7 +64,7 @@
 
           <!-- if not logged in-->
           <% else %>
-            <p>Signup to create a reading list!</p>
+            <p class="info-text"><strong>Signup to create a reading list!</strong></p>
               <div class="form-group">
                 <button class="form-control btn btn-default disabled">I've Read It!</button>
               </div>
