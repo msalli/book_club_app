@@ -15,11 +15,11 @@ $(document).ready(function() {
       });
 
   // hide modal
-  $(".modal").hide();
+  $("#myModal").hide();
 
   // close functionality on modal
   $(".close").on("click", function() {
-      $(".modal").hide();
+      $("#myModal").hide();
       $(".error").html("");
       $(".book-title").html("");
       $(".book-author").html("");
@@ -47,7 +47,7 @@ $(document).ready(function() {
           console.log("Success with data", data);
           // clear form
           $(".search-db").val("");
-              $(".modal").show();
+              $("#myModal").show();
               if (data[0] !== undefined) {
                 $(".book-title").html(data[0].title);
                 $(".book-author").html(data[0].author);
