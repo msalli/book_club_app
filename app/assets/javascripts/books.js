@@ -24,6 +24,7 @@ $(document).ready(function() {
       $(".book-title").html("");
       $(".book-author").html("");
       $(".book-image").html("");
+      $(".book-link").html("");
   });
 
 
