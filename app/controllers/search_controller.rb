@@ -5,6 +5,7 @@ class SearchController < ApplicationController
     @results = Book.where(:title => params[:search])
 
     render json: @results
+    p @results
 
   end
 

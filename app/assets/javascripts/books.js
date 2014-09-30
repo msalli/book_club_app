@@ -1,6 +1,6 @@
 $(document).ready(function() {
 
-  // photo enlarge, popover box on index page
+  // fancybox popover on index page
   $(".fancybox")
       .attr('rel', 'gallery')
       .fancybox({
@@ -14,15 +14,20 @@ $(document).ready(function() {
         }
       });
 
-  //modal?
+  // hide modal
   $(".modal").hide();
 
+  // close functionality on modal
   $(".close").on("click", function() {
       $(".modal").hide();
+      $(".error").html("");
+      $(".book-title").html("");
+      $(".book-author").html("");
+      $(".book-image").html("");
   });
 
 
-  // index page search bar
+  // nav search bar
   $("#search-bar").on("submit", function(e) {
     e.preventDefault();
 
@@ -45,7 +50,10 @@ $(document).ready(function() {
               if (data[0] !== undefined) {
                 $(".book-title").html(data[0].title);
                 $(".book-author").html(data[0].author);
+                $(".book-image").append("<img src=" + data[0].lg_img + " width='175' height='265'>");
+                $(".book-link").append("<a href='/books/" + data[0].id + "'>See more...</a>");
               } else {
+
                 $(".error").html("Your search didn't match any titles in our database.");
               }
         },

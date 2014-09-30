@@ -8,7 +8,8 @@ class BooksController < ApplicationController
     @books = Book.all()
     @book = Book.new
 
-    @search = ""
+    @results = Book.where(:title => params[:search])
+
     # for nav
     @current_user = current_user
   end
@@ -26,7 +27,8 @@ class BooksController < ApplicationController
      redirect_to root_path
   end
 
-   # SEARCHING AMAZON
+
+  # SEARCHING AMAZON
   def amazon_request(book)
     req = Vacuum.new('US')
 
