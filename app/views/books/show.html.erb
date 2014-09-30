@@ -32,6 +32,7 @@
         <div class="buttons">
           <% if @current_user %>
               <% if !@this_book %>
+                <!-- updates status of the book for user -->
                 <p id="book-status"></p>
                 <!-- button to add to read -->
                 <form action="/books/<%= @book.id %>/favorites" method="post" class="read-it">

@@ -36,14 +36,47 @@
 }
 
 
-/* BOOKS ON INDEX */
+/****** INDEX PAGE ******/
+
+.modal-body {
+  height: 325px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.book-image {
+  float: left;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.book-title {
+  margin-left: 30px;
+}
+
+
+
+/* in modal  - currently disabled */
+/*#read-button-index {
+  float: left;
+  margin-right: 5px;
+  width: 150px;
+  font-family: 'Quicksand', sans-serif;
+}
+
+#queue-button-index {
+  float: left;
+  margin-left: 5px;
+  width: 150px;
+  font-family: 'Quicksand', sans-serif;
+}*/
+
 .book {
   height: 265px;
   width: 175px;
   margin: 10px;
 }
 
-/* BOOK SHOW PAGE */
+/****** BOOK SHOW PAGE *******/
 
 /* buttons */
 #read-button {
@@ -75,8 +108,8 @@
 .book-description h3 {
   font-family: 'Quicksand', sans-serif;
 }
-/* discussions section */
 
+/* discussions section */
 #convo-hed {
   margin-top: 50px;
   color: #373740;
