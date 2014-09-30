@@ -19,16 +19,6 @@
             <p class="error"></p>
             <p class="book-title"></p>
             <p class="book-author"></p>
-
-            <!-- this form searches using the amazon api -->
-            <%= form_for @book do |f| %>
-            <div class="form-group">
-              <%= f.text_field :title, class: "search-az form-control", placeholder: "Search it on Amazon" %>
-            </div>
-            <div class="form-group">
-              <%= f.submit "Search Book", class: "btn btn-default"%>
-            </div>
-            <% end %>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" id="modal-read">I've Read It!</button>
