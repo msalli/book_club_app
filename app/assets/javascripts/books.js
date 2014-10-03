@@ -14,8 +14,9 @@ $(document).ready(function() {
         }
       });
 
-  // hide modal
+  // hide modals
   $("#myModal").hide();
+  $("#azModal").hide();
 
   // close functionality on modal
   $(".close").on("click", function() {
@@ -25,6 +26,18 @@ $(document).ready(function() {
       $(".book-author").html("");
       $(".book-image").html("");
       $(".book-link").html("");
+  });
+
+  $(".close").on("click", function() {
+    $("#azModal").hide();
+  })
+
+
+  // amazon search
+  $(".amazon-link").on("click", function(e) {
+    e.preventDefault();
+
+    $("#azModal").show();
   });
 
 

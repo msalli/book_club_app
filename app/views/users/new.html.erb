@@ -1,37 +1,40 @@
 <%= render "books/nav", locals: { user: @user }  %>
 
-<div class="container">
+<div class="panel-body">
   <div class="row">
     <div class="col-xs-4 col-xs-offset-2">
       <h1>join book club</h1>
 
+      <form role="form">
       <!-- new user form -->
       <%= form_for @user do |f| %>
-      <div class="form-group">
-        <%= f.label :first_name %>
-        <%= f.text_field  :first_name, class: "form-control", :autofocus => true %>
-      </div>
-      <div class='form-group'>
-        <%= f.label :last_name %>
-        <%= f.text_field :last_name, class: "form-control"  %>
-      </div>
-      <div class="form-group">
-        <%= f.label :email %>
-        <%= f.email_field :email, class: "form-control"  %>
-      </div>
-      <div class="form-group">
-        <%= f.label :password %>
-        <%=  f.password_field :password, class: "form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.label :image_url, "Profile picture" %>
-        <%= f.text_field :image_url, :placeholder => "URL", class: "form-control" %>
-      </div>
-      <div class="form-group">
-        <%= f.submit "Save!", class: "form-control btn btn-success" %>
-      </div>
-      <% end %>
 
+        <%= f.label :first_name %>:
+        <%= f.text_field  :first_name, class: "form-control", :autofocus => true %>
+        <br>
+
+        <%= f.label :last_name %>:
+        <%= f.text_field :last_name, class: "form-control"  %>
+        <br>
+
+        <%= f.label :email %>:
+        <%= f.email_field :email, class: "form-control"  %>
+        <br>
+
+        <%= f.label :password %>:
+        <%=  f.password_field :password, class: "form-control" %>
+        <br>
+
+        <%= f.label :image_url, "Profile picture" %>:
+        <%= f.text_field :image_url, :placeholder => "URL", class: "form-control" %>
+
+
+        <div class="form-group">
+          <%= f.submit "Save!", class: "form-control btn btn-success" %>
+        </div>
+
+      <% end %>
+      </form>
     </div>
   </div>
 </div>
