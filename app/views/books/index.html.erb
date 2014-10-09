@@ -1,5 +1,13 @@
 <%= render "nav", locals: { user: @user } %>
 <%= render "header"  %>
+
+<div class="row">
+  <div class="col-xs-12 amazon">
+  <p>Are we missing the book you're looking for? <a href="#azModal" data-toggle="modal" class="amazon-link">Add it now!</a></p>
+  </div>
+</div>
+
+
  <div class="panel-body">
     <% flash.each do |k, v|%>
       <div class="alert alert-success" role="alert">
@@ -7,38 +15,18 @@
       </div>
     <% end %>
 
-    <!-- search modal -->
-    <div class="modal" id="myModal">
-      <div class="modal-dialog">
-         <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
-            <h4 class="modal-title" id="myModalLabel">Results:</h4>
-          </div>
-          <div class="modal-body">
-            <p class="error"></p>
-            <p class="book-image"></p>
-            <p class="book-title"></p>
-            <p class="book-author"></p>
-            <p class="book-link"></p>
+<%= render "searchmodal" %>
+<%= render "amazonmodal"  %>
 
-          </div>
-            <div class="modal-footer">
 
-            </div>
-        </div>
-      </div>
+  <div class="row-center">
+    <div class="col-xs-12 books">
+      <!-- all books, with code for fancy box popup -->
+      <% @books.each do |book| %>
+       <a class="fancybox" title="<h4><%= book.title %></h4><h5>Written by: <%= book.author %></h5><a href='/books/<%= book.id %>'>See More...</a>" rel="group" href="<%= book.lg_img %>"><img class="book" src="<%= book.lg_img %>"></a>
+      <% end %>
     </div>
-
-    <div class="row-center">
-      <div class="col-xs-12 books">
-        <!-- all books, with code for fancy box popup -->
-        <% @books.each do |book| %>
-         <a class="fancybox" title="<h4><%= book.title %></h4><h5>Written by: <%= book.author %></h5><a href='/books/<%= book.id %>'>See More...</a>" rel="group" href="<%= book.lg_img %>"><img class="book" src="<%= book.lg_img %>"></a>
-        <% end %>
-      </div>
-    </div>
-
-
-
   </div>
+
+
+</div>
