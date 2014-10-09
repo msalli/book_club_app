@@ -51,14 +51,11 @@ class BooksController < ApplicationController
     response = req.item_search(query: params)
 
     hash = Hash.from_xml(response.body)
-    # p "This is the large hash", hash
 
     enterHash = hash["ItemSearchResponse"]["Items"]["Item"]
-    ap enterHash
     book = nil
 
     if enterHash.kind_of?(Hash) == true
-      p "CONFIRMED THIS IS A HASH"
       link = enterHash["DetailPageURL"]
       author = enterHash["ItemAttributes"]["Author"]
       title = enterHash["ItemAttributes"]["Title"]
@@ -71,33 +68,29 @@ class BooksController < ApplicationController
       end
       book = {:title => title, :author => author, :description => description, :lg_img => lg_img, :link => link }
     else
-      p "THIS IS NOT A HASH"
       if enterHash != nil
         enterHash.each do |res|
-          p "THIS IS THE RES", res
             link = res["DetailPageURL"]
-            ap link
             author = res["ItemAttributes"]["Author"]
-            ap author
             title = res["ItemAttributes"]["Title"]
-            ap title
             lg_img = res["LargeImage"]["URL"]
-            ap lg_img
 
             if !res["EditorialReviews"]["EditorialReview"][0]
               description = res["EditorialReviews"]["EditorialReview"]["Content"]
             else
               description = res["EditorialReviews"]["EditorialReview"][0]["Content"]
             end
-            ap description
 
             book = {:title => title, :author => author, :description => description, :lg_img => lg_img, :link => link }
+
+            ap "printing the book object"
+            ap book
           break
         end #end for each do
       end #end for if enter hash is not nil
     end #ending if for confirm type
 
-    book
+   book
   end
 
 

@@ -8,7 +8,11 @@
       </div>
       <div class="modal-body">
         <%= form_for @book do |f| %>
-
+          <p>Search on Amazon's database to add a new book:</p>
+          <%= f.text_field :title, class: "form-control", placeholder: "Book Title" %>
+          <div class="form-group">
+            <%= f.submit "Search", class: "btn btn-default" %>
+          </div>
         <% end %>
 
       </div>
