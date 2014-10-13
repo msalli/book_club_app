@@ -188,7 +188,7 @@ $(document).ready(function() {
   });
 
 
-  $(".comment-body").hide();
+  // $(".comment-body").hide();
   $(".comment-on-comment").hide();
 
   $(".comment-toggle").each(function(index, value) {
