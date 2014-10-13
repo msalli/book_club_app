@@ -1,6 +1,12 @@
 <%= render "nav" %>
 <%= render "header"  %>
 
+<div class="row">
+    <div class="col-xs-12 amazon">
+      <p>Already read it? <a href="javascript:void(0);" id="header-bottom-discussions">Click here to join the discussion!</a></p>
+    </div>
+  </div>
+
 <div class="panel-body">
   <div class="row">
     <!-- previous button -->
@@ -23,13 +29,13 @@
 
       <!-- description -->
       <div class="col-xs-6">
-        <div class="book-description">
+        <div class="book-description right-panel">
           <h3><%= @book.title %></h3>
           <h4><%= @book.author %></h4>
           <p><strong>Description:</strong></p>
           <p><%=raw @book.description  %></p>
         </div>
-        <div class="buttons">
+        <div class="buttons right-panel">
           <% if @current_user %>
               <% if !@this_book %>
                 <!-- updates status of the book for user -->
@@ -74,30 +80,37 @@
               </div>
           <% end %>
         </div>
-      </div>
-    </div>
-  </div>
 
+        <!-- DISCUSSION AREA HIDDEN ON LOAD, SHOW ON CLICK -->
+        <div class="discussions-hidden">
+          <h4>Discussions about <%= @book.title %> </h4>
+          <div class="all-comments">
+            <h5>Share your favorite quote!</h5>
+             <span class="comment-toggle"><a href="javascript:void(0);">See full discussion</a></span></p>
+              <%= form_for ([@comment, @comment]) do |f| %>
+                <%= f.text_field :body, class: "form-control comment-on-comment"  %>
+              <% end %>
+             <p class="comment-body"><%= comment.body %></p>
 
-    <div class="row">
-      <div class="col-xs-11 col-xs-offset-1" id="convo-hed">
-        <h3>Spoilers below!</h3>
-        <a href="javascript:void(0);" id="spoilers"><h5>Read the book? Join the discussion!</h5></a>
-      </div>
-    </div>
+            <% @book.comments.each do |comment| %>
+              <div class="indiv-comment">
+                <p><strong><%= comment.title %></strong>
+                <br>
+               <!--  <span class="comment-toggle"><a href="javascript:void(0);">See full discussion</a></span></p> -->
+                <p class="comment-body"><%= comment.body %></p>
+              </div>
+            <% end %>
+          </div>
 
-    <div class="row" id="discussions">
-      <div class="col-xs-12">
-        <div class="col-xs-4 col-xs-offset-1">
-          <div class="form-group">
+           <div class="form-group">
             <%= form_for ([@book, @comment]) do |f| %>
             <div class="form-group">
               <%= f.label :title, "Start a new discussion:" %>
-              <%= f.text_field :title, class: "form-control", id: "title-val" %>
+              <%= f.text_field :title, class: "form-control", id: "title-val", placeholder: "What's your discussion topic?" %>
             </div>
             <div class="form-group">
               <%= f.label :body, "Include a comment:" %>
-              <%= f.text_area :body, class: "form-control", id: "body-val" %>
+              <%= f.text_area :body, class: "form-control", id: "body-val", placeholder: "Go ahead, start the conversation. With a riveting question, perhaps?" %>
             </div>
             <div class="form-group">
               <%= f.submit "Post", class: "form-control btn btn-default" %>
@@ -105,25 +118,10 @@
             <% end %>
           </div>
         </div>
-
-        <div class="col-xs-6">
-          <div class="all-comments">
-           <h4>What people are talking about: </h4>
-
-          <% @book.comments.each do |comment| %>
-            <div class="indiv-comment">
-              <p><strong><%= comment.title %></strong>
-              <br>
-              <span class="comment-toggle"><a href="javascript:void(0);">See full discussion</a></span></p>
-              <p class="comment-body"><%= comment.body %></p>
-            </div>
-          <% end %>
-
-
-
-          </div>
-        </div>
       </div>
     </div>
   </div>
+
+<!-- closing panel-body -->
+</div>
 
