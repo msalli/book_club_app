@@ -18,7 +18,7 @@ $(document).ready(function() {
   $("#myModal").hide();
   $("#azModal").hide();
 
-  // close functionality on modal
+  // close functionality on modals
   $(".close").on("click", function() {
       $("#myModal").hide();
       $(".error").html("");
@@ -141,6 +141,16 @@ $(document).ready(function() {
 
   });
 
+  $(".discussions-hidden").hide();
+
+  $("#header-bottom-discussions").on("click", function(e) {
+    $(".right-panel").hide();
+    $(".discussions-hidden").show();
+
+  });
+
+
+
   // show page
   // reviews
   $(".new_comment").on("submit", function(e) {
@@ -177,21 +187,20 @@ $(document).ready(function() {
 
   });
 
-  $("#discussions").hide();
-  $(".comment-body").hide();
+
+  // $(".comment-body").hide();
+  $(".comment-on-comment").hide();
 
   $(".comment-toggle").each(function(index, value) {
     $(value).click(function() {
       console.log(value);
-       $(".comment-body").toggle();
+       $(".comment-on-comment").show();
+       $(".comment-body").show();
+
 
     });
   });
 
-  $("#spoilers").on("click", function(e) {
-    e.preventDefault();
-     $("#discussions").toggle();
-  });
 
 
 

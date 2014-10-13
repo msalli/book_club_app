@@ -109,34 +109,16 @@
 }
 
 /* discussions section */
-#convo-hed {
-  margin-top: 50px;
-  color: #373740;
-  font-family: 'Quicksand', sans-serif;
-}
-
-#convo-hed a {
-  color: #373740;
-  font-family: 'Jacques Francois', serif;
-}
-
 .form-group {
   font-family: 'Quicksand', sans-serif;
-  color: white;
+  color: #373740;
   margin-top: 30px;
-}
-
-#discussions {
-  height: 700px;
-  background-color: #8C8DA3;
-  font-family: 'Jacques Francois', serif;
 }
 
 .indiv-comment {
   padding-top: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-  border-top: 1px dotted #373740;
 }
 
 
@@ -152,11 +134,11 @@ span {
 }
 
 .all-comments {
-  margin-top: 55px;
+  border: 2px solid #373740;
   padding: 15px;
-  background-color: white;
-  height: 500px;
-  overflow: scroll;
+  height: 300px;
+  max-height: 500px;
+  overflow-y: scroll;
   overflow-x: hidden;
 }
 

@@ -1,0 +1,15 @@
+ <div class="form-group">
+  <%= form_for [parent, comment] do |f| %>
+    <div class="form-group">
+      <%= f.label :title, "Start a new discussion:" %>
+      <%= f.text_field :title, class: "form-control", id: "title-val", placeholder: "What's your discussion topic?" %>
+    </div>
+    <div class="form-group">
+      <%= f.label :body, "Include a comment:" %>
+      <%= f.text_area :body, class: "form-control", id: "body-val", placeholder: "Go ahead, start the conversation. With a riveting question, perhaps?" %>
+    </div>
+    <div class="form-group">
+      <%= f.submit "Post", class: "form-control btn btn-default" %>
+    </div>
+  <% end %>
+</div>

@@ -1,8 +1,8 @@
 <%= render "books/nav", locals: { user: @user }  %>
 
 <div class="panel-body">
-  <div class="row">
-    <div class="col-xs-4 col-xs-offset-2">
+  <div class="row-center">
+    <div class="col-xs-4 col-xs-offset-1">
       <h1>join book club</h1>
 
       <form role="form">
@@ -35,6 +35,14 @@
 
       <% end %>
       </form>
+    </div>
+    <div class="col-xs-5 col-xs-offset-1 join">
+      <h3>by joining <strong>book club</strong> you can: </h3>
+      <ul>
+        <li>add books to your queue for future reading</li>
+        <li>keep track of books you've already read</li>
+        <li>start or join discussions on books you're reading now</li>
+      </ul>
     </div>
   </div>
 </div>
